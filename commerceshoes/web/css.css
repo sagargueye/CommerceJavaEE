@@ -1,0 +1,126 @@
+.body{
+   /* background-image:  url("image/fond1.jpg");*/
+    background-repeat:no-repeat no-repeat;
+    padding : 0px;
+    margin: 10px;
+    width: 100%;
+    height: 90%;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+.contenue {
+   text-align: center;
+   background: no-repeat center center;
+   
+}
+#bande_horizontale{
+padding: 0px;
+margin: 0px;
+border: none;
+width: 100%;
+height: 50px;/* pour afficher la barre*/
+background-color: #F20089;
+} 
+#logo{
+    display : block;
+    color : #000;
+    text-decoration : goldenrod;
+    padding : 10px;
+}
+#onglets
+{
+    font : bold 11px Batang, arial, serif;
+    list-style-type : none;
+    padding-bottom : 24px; /* à modifier suivant la taille de la police ET de la hauteur de l'onglet dans #onglets li */
+    border-bottom : 1px solid #9EA0A1;
+    margin-left : 0;
+}
+#onglets li
+{
+    float : right;
+    height : 100%; /* à modifier suivant la taille de la police pour centrer le texte dans l'onglet */
+    /*background-color: #F4F9FD;*/
+    margin : 2px 2px 0 2px !important;  /* Pour les navigateurs autre que IE */
+    margin : 1px 2px 0 2px;  /* Pour IE  */
+   border : none;
+}
+#onglets li.active
+{
+    border-bottom: none;
+    background-color: lightpink;
+}
+#onglets a
+{
+    display : block;
+    color : #000;
+    text-decoration : goldenrod;
+    padding : 15px;
+}
+#onglets a:hover
+{
+    background : #fff;
+}
+
+.h1{
+    /*font-family: Verdana,fantasy, sans-serif 
+    font-style: normal
+font-variant: Variante de police
+font-weight: Taille de la police*/
+}
+
+/*css footer*/
+#centercolumn{
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    width: 100%;
+    height: 50px;/* pour afficher la barre*/
+    background-color: #000;
+    text-align: center;
+} 
+#ongletsfooter{
+	font : bold 11px Batang, arial, serif;
+    list-style-type : none;
+    padding-bottom : 24px; /* à modifier suivant la taille de la police ET de la hauteur de l'onglet dans #onglets li */
+    border-bottom : 1px solid #9EA0A1;
+    margin-left : 0;
+    
+}
+#ongletsfooter li
+{
+    float :left;
+    height : 100%; /* à modifier suivant la taille de la police pour centrer le texte dans l'onglet */
+    /*background-color: #F4F9FD;*/
+    /*margin : 2px 2px 0 2px !important;  /* Pour les navigateurs autre que IE */
+    /*margin : 1px 2px 0 2px;  /* Pour IE  */
+   border : none;
+   font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: #fff;
+    font-size: 18px;
+    /*margin-top: 5px;
+    margin-left: auto;
+
+    margin-right: auto;*/
+    margin: 0 auto;
+}
+#ongletsfooter a
+{
+    display : block;
+    color : #fff;
+    text-decoration : goldenrod;
+    padding : 15px;
+    text-align: center;
+}
+
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    text-align: center;
+}
