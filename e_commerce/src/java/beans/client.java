@@ -20,7 +20,7 @@ public class client {
      protected String mail;
      protected String mdpsession;
      //une table qui gere les commandes du client
-     private ArrayList<Compra> listecommande;
+     private ArrayList<Commande> listecommande;
 
     public client(String numclient, String nomclient, String prenomclient, 
             String adresse, double telephone, String mail, String mdpsession) {
@@ -32,7 +32,7 @@ public class client {
         this.mail = mail;
         this.mdpsession = mdpsession;
         //initialisation de la liste des commandes
-        listecommande=new ArrayList<Compra>();
+        listecommande=new ArrayList<Commande>();
     }
 
     public client(String numclient, String mdpsession) {
@@ -49,11 +49,11 @@ public class client {
     }
      //afficher la liste des commande du client
     public void afficherlistecommande(double numclient) {
-         for(Compra c:listecommande)
+         for(Commande c:listecommande)
          c.toString();
     }
     //passer un nouveau commande/ajoute un objet commande a la liste des commandes
-    public void ajoutercommande(Compra c)
+    public void ajoutercommande(Commande c)
     {
         listecommande.add(c);
     }
@@ -92,7 +92,7 @@ public class client {
         return mdpsession;
     }
 
-    public ArrayList<Compra> getListecommande() {
+    public ArrayList<Commande> getListecommande() {
         return listecommande;
     }
     
