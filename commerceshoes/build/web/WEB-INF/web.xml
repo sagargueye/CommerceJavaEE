@@ -28,6 +28,14 @@
         <servlet-name>c_inscription</servlet-name>
         <servlet-class>controler.c_inscription</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>c_boutique</servlet-name>
+        <servlet-class>controler.c_boutique</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>c_compte</servlet-name>
+        <servlet-class>controler.c_compte</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>servlet</servlet-name>
         <url-pattern>/servlet</url-pattern>
@@ -47,6 +55,14 @@
     <servlet-mapping>
         <servlet-name>c_inscription</servlet-name>
         <url-pattern>/c_inscription</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>c_boutique</servlet-name>
+        <url-pattern>/c_boutique</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>c_compte</servlet-name>
+        <url-pattern>/c_compte</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

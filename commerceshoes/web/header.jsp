@@ -22,8 +22,22 @@
             </div>
            <hr> <div id="bande_horizontale" >
                 <line id="onglets">
+                
+                      <li><a href="c_inscription"> Deconnexion </a></li>
+                      <li><a href="c_panier"> Panier </a></li>
+                      
+                      
+                      
                       <li><a href="c_inscription"> S'inscrire </a></li>
                       <li><a href="c_connexion"> Se connecter </a></li>
+                      <li><a href="c_boutique"> Boutique </a></li>
+                      
+                      
+                      <li><a href="c_compte">Mon compte </a></li>
+                      
+                      
+                      
+                      
                       <li class="active"><a href="c_accueil"> Accueil </a></li>
                       </line>
             </div></hr>

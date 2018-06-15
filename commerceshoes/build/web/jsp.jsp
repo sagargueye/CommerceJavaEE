@@ -33,16 +33,7 @@
 =======
     <div id="logo"> 
 >>>>>>> 35e7c4e9cb63e91dee25f81c6b017b04ce7a4f09
-                <h1> <img src="image/logo1.png" border="5" alt="logo"> 
-                Shoes shop</h1>
-            </div>
-           <hr> <div id="bande_horizontale" >
-                <line id="onglets">
-                      <li><a href="c_inscription"> S'inscrire </a></li>
-                      <li><a href="c_connexion"> Se connecter </a></li>
-                      <li class="active"><a href="c_accueil"> Accueil </a></li>
-                      </line>
-            </div></hr>
+              
            <%--  <h1>Hello World!</h1>
             <hr>
                   <h2>Hello World!</h2>  

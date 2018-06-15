@@ -3,12 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Z:/java%20EE/projet-javaEE/commerceshoes/src/java/controler/c_connexion.java</file>
-            <file>file:/Z:/java%20EE/projet-javaEE/commerceshoes/web/css.css</file>
-            <file>file:/Z:/java%20EE/projet-javaEE/commerceshoes/web/header.jsp</file>
-            <file>file:/Z:/java%20EE/projet-javaEE/commerceshoes/web/jsp.jsp</file>
-            <file>file:/Z:/java%20EE/projet-javaEE/commerceshoes/web/connexion.jsp</file>
-            <file>file:/Z:/java%20EE/projet-javaEE/commerceshoes/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE-master/commerceshoes/web/inscription.css</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE-master/commerceshoes/src/java/controler/c_boutique.java</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE-master/commerceshoes/src/java/controler/c_inscription.java</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE-master/commerceshoes/web/inscription.jsp</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE-master/commerceshoes/src/java/controler/c_connexion.java</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE-master/commerceshoes/web/boutique.css</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE-master/commerceshoes/web/connexion.jsp</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE-master/commerceshoes/web/jsp.jsp</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE-master/commerceshoes/web/boutique.jsp</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE-master/commerceshoes/web/css.css</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE-master/commerceshoes/web/cssConnexion.css</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE-master/commerceshoes/web/header.jsp</file>
         </group>
     </open-files>
 </project-private>
