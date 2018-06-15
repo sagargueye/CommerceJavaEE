@@ -62,7 +62,7 @@
     %>
             
     <li><a href="<%=hrefDeLogin%>"><%=inicioONombre%></a></li>      <!-- //cambia-->
-     <% String inicioNombreCarro="Carrito.jsp";
+     <% String inicioNombreCarro="Panier.jsp";
             String href404="Notfound.jsp";
          if(session.getAttribute("carroData")==null){
          inicioNombreCarro=href404;
@@ -70,8 +70,8 @@
         %>
         <li><a href="<%=inicioNombreCarro%>">Panier</a></li>            <!--  //cambia-->
         
-         <% String inicioHistorial="Historial.jsp";
-         if(session.getAttribute("compra")==null){
+         <% String inicioHistorial="Historique.jsp";
+         if(session.getAttribute("Commande")==null){
          inicioHistorial=href404;
         }
         %>

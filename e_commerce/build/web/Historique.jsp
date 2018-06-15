@@ -1,10 +1,6 @@
-<%-- 
-    Document   : Historial
-    Created on : 01/12/2016, 03:06:15 PM
-    Author     : clases
---%>
 
-<%@page import="beans.Compra"%>
+
+<%@page import="beans.Commande"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="beans.Producto"%>
 <%@page import="beans.Usuario"%>
@@ -29,7 +25,7 @@
  
         <% 
         
-        ArrayList<Compra> compra = (ArrayList<Compra>) session.getAttribute("compra");
+        ArrayList<Commande> Commande = (ArrayList<Commande>) session.getAttribute("Commande");
         
         %>  
 
@@ -63,7 +59,7 @@
     %>
             
     <li><a href="<%=hrefDeLogin%>"><%=inicioONombre%></a></li>     
-    <% String inicioNombreCarro="Carrito.jsp";
+    <% String inicioNombreCarro="Panier.jsp";
             String href404="Notfound.jsp";
          if(session.getAttribute("carroData")==null){
          inicioNombreCarro=href404;
@@ -71,8 +67,8 @@
         %>
         <li><a href="<%=inicioNombreCarro%>">Panier</a></li>           
         
-         <% String inicioHistorial="Historial.jsp";
-         if(session.getAttribute("compra")==null){
+         <% String inicioHistorial="Historique.jsp";
+         if(session.getAttribute("Commande")==null){
          inicioHistorial=href404;
         }
         %>
@@ -99,7 +95,7 @@
     </div>
     <div class="modal-footer">
         <p>Vous n'avez pas encore de compte?</p>
-        <input type="button" class="waves-effect waves-light btn orange darken-4" value="Crear">
+        <input type="button" class="waves-effect waves-light btn orange darken-4" value="Creer">
  
     </div>
   </div>     
@@ -107,13 +103,13 @@
   
   <div class="container">
       <div class="row">
-          <% for(int i=0;i<compra.size();i++){ %>
+          <% for(int i=0;i<Commande.size();i++){ %>
           <div class="divider"></div>
                 <div class="section">
                     
-                    <div class="col s4 m4 l4"><p>Commande: <%= compra.get(i).getCompraID() %><!-- compraID--></p></div>
-                    <div class="col s4 m4 l4"><p>Total: <%=compra.get(i).getCarritoComprado().getTotalCarrito() %></p></div>
-                    <div class="col s4  m4 l4"><p>Date: <%= compra.get(i).getTimeStampCompra() %></p></div>
+                    <div class="col s4 m4 l4"><p>Commande: <%= Commande.get(i).getCommandeID() %><!-- CommandeID--></p></div>
+                    <div class="col s4 m4 l4"><p>Total: <%=Commande.get(i).getPanierCommandedo().getTotalPanier() %></p></div>
+                    <div class="col s4  m4 l4"><p>Date: <%= Commande.get(i).getTimeStampCommande() %></p></div>
                 </div>
                 <div class="divider"></div>
           <%}%>

@@ -1,10 +1,6 @@
-<%-- 
-    Document   : Carrito
-    Created on : 30/11/2016, 04:42:06 PM
-    Author     : clases
---%>
 
-<%@page import="beans.Carrito"%>
+
+<%@page import="beans.Panier"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="beans.Producto"%>
 <%@page import="beans.Usuario"%>
@@ -51,7 +47,7 @@
     %>
             
     <li><a href="<%=hrefDeLogin%>"><%=inicioONombre%></a></li>     
-    <% String inicioNombreCarro="Carrito.jsp";
+    <% String inicioNombreCarro="Panier.jsp";
             String href404="Notfound.jsp";
          if(session.getAttribute("carroData")==null){
          inicioNombreCarro=href404;
@@ -59,7 +55,7 @@
         %>
         <li><a href="<%=inicioNombreCarro%>">Panier</a></li>            
         
-         <% String inicioHistorial="Historial.jsp";
+         <% String inicioHistorial="Historique.jsp";
          if(session.getAttribute("compra")==null){
          inicioHistorial=href404;
         }
@@ -97,27 +93,27 @@
     </div>
     <div class="modal-footer">
         <p>Vous n'avez pas encore de compte?</p>
-        <input type="button" class="waves-effect waves-light btn orange darken-4" value="Crear">
+        <input type="button" class="waves-effect waves-light btn orange darken-4" value="Creer">
      <!-- <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a> -->
     </div>
   </div>  
     
     
     <% 
-    Carrito carroParaVista = (Carrito) session.getAttribute("carroData");
+    Panier carroParaVista = (Panier) session.getAttribute("carroData");
     
     %>
     <!-- Funcion que regresa el total en el carrito-->
     <%! 
         
-        public double total(Carrito e,ArrayList<Producto> d, HttpSession session){
+        public double total(Panier e,ArrayList<Producto> d, HttpSession session){
             double total=0;
-         for (int i=0;i<e.getProductoCarrito().size();i++){
+         for (int i=0;i<e.getProductoPanier().size();i++){
          
-         total+=d.get(e.getProductoCarrito().get(i)).getPrecioProducto()*e.getExistenciaProductoCarrito().get(i) ;
+         total+=d.get(e.getProductoPanier().get(i)).getPrecioProducto()*e.getExistenciaProductoPanier().get(i) ;
          
         }
-         session.setAttribute("totalCarrito",total);
+         session.setAttribute("totalPanier",total);
          return total;
     } 
         
@@ -129,26 +125,26 @@
         System.out.println("cuantas veces se llama este jsp?");
         
         ArrayList<Producto> productos =(ArrayList<Producto>) session.getAttribute("productsLista"); 
-        System.out.println("Vista"+ carroParaVista.getCarritoID().toString());
+        System.out.println("Vista"+ carroParaVista.getPanierID().toString());
         System.out.println("Vista"+ carroParaVista.getUsuarioEmail());
-        System.out.println("Vista"+ carroParaVista.getProductoCarrito());
-        System.out.println("Vista"+ carroParaVista.getExistenciaProductoCarrito());
+        System.out.println("Vista"+ carroParaVista.getProductoPanier());
+        System.out.println("Vista"+ carroParaVista.getExistenciaProductoPanier());
        
         
-        for (int i=0;i<carroParaVista.getProductoCarrito().size();i++){
+        for (int i=0;i<carroParaVista.getProductoPanier().size();i++){
             
         
     %>
      <div class="divider"></div>
                 <div class="section">
                      <div class="row">
-                         <div class="col s6 m3 l2"><img class="responsive-img" src="<%= productos.get(carroParaVista.getProductoCarrito().get(i)).getImagenProducto() %>"></div>
-                    <div class="col s6 m3 l2"><h5><%= productos.get(carroParaVista.getProductoCarrito().get(i)).getNombre_producto() %></h5></div>
-                    <div class="col s6 m3 l2"><p><%= productos.get(carroParaVista.getProductoCarrito().get(i)).getPrecioProducto() %></p></div>
+                         <div class="col s6 m3 l2"><img class="responsive-img" src="<%= productos.get(carroParaVista.getProductoPanier().get(i)).getImagenProducto() %>"></div>
+                    <div class="col s6 m3 l2"><h5><%= productos.get(carroParaVista.getProductoPanier().get(i)).getNombre_producto() %></h5></div>
+                    <div class="col s6 m3 l2"><p><%= productos.get(carroParaVista.getProductoPanier().get(i)).getPrecioProducto() %></p></div>
                     <div class="col s6  m3 l2 offset-l4">
-                        <p>Quantité <%=carroParaVista.getExistenciaProductoCarrito().get(i) %></p>
-                        <form method="post" action="CarritoLoad">
-                            <input type="hidden" name="productoACambiar" value="<%= carroParaVista.getProductoCarrito().get(i)%>">       
+                        <p>Quantité <%=carroParaVista.getExistenciaProductoPanier().get(i) %></p>
+                        <form method="post" action="PanierLoad">
+                            <input type="hidden" name="productoACambiar" value="<%= carroParaVista.getProductoPanier().get(i)%>">       
                             <input type="number" name="cantidadACambiar" required>
                     <button class="waves-effect waves-light btn orange darken-3" type="submit">Actualiser</button>
                         </form>
