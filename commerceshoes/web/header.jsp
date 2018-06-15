@@ -23,7 +23,7 @@
            <hr> <div id="bande_horizontale" >
                 <line id="onglets">
                 
-                      <li><a href="c_inscription"> Deconnexion </a></li>
+                      <li><a href="c_accueil"> Deconnexion </a></li>
                       <li><a href="c_panier"> Panier </a></li>
                       
                       

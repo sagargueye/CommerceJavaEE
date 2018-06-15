@@ -1,8 +1,4 @@
-<%-- 
-    Document   : Agregar
-    Created on : 30/11/2016, 02:40:49 PM
-    Author     : clases
---%>
+
 
 <%@page import="java.util.ArrayList"%>
 <%@page import="beans.Producto"%>
@@ -14,15 +10,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-         <!--Import Google Icon Font-->
+
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
          <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 
-        <!--Let browser know website is optimized for mobile-->
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Compramelo</title>
+        <title>e_commerce</title>
     </head>
     <body>
         <script>
@@ -36,8 +32,7 @@
          }
             
         </script>
-        <!-- Inicio de Producto -->
-           <%--<c:import url="/ProductLoad" /> --%>
+
         <%  //Llama los productos
            ArrayList<Producto> productos =(ArrayList<Producto>) session.getAttribute("productsLista"); 
             
@@ -50,12 +45,12 @@
         
      <nav>       
     <div class="nav-wrapper orange lighten-1">
-      <a href="index.jsp" class="brand-logo">Compramelo</a>
+      <a href="index.jsp" class="brand-logo">e_commerce</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
           
          
           <%
-              String inicioONombre="Iniciar Sesion";
+              String inicioONombre="Se Connecter";
               String hrefDeLogin="#loginModal";
               if(session.getAttribute("usuario")!=null){
                inicioONombre="Bienvenido, ";
@@ -73,7 +68,7 @@
          inicioNombreCarro=href404;
         }
         %>
-        <li><a href="<%=inicioNombreCarro%>">Carrito</a></li>            <!--  //cambia-->
+        <li><a href="<%=inicioNombreCarro%>">Panier</a></li>            <!--  //cambia-->
         
          <% String inicioHistorial="Historial.jsp";
          if(session.getAttribute("compra")==null){
@@ -81,7 +76,7 @@
         }
         %>
         
-        <li><a href="<%=inicioHistorial%>">Historial de Compras</a></li>           <!-- //cambia-->
+        <li><a href="<%=inicioHistorial%>">Historiques des commandes</a></li>           <!-- //cambia-->
       </ul>
     </div>
       </nav>
@@ -104,10 +99,10 @@
     
      <p class="col l10 offset-l1"><%=productos.get(current).getDescripcionProducto()%></p> 
      
-       <div class="col l1 offset-l4"><p>Cantidad: </p></div>
+       <div class="col l1 offset-l4"><p>Quantité: </p></div>
        <form action="AddToCart" method="post">
        <div class="col l2"><input name="cantidad" id="cantidadProducto" type="number" required min="1" max="<%= productos.get(current).getExistenciaProducto()%>"></div>
-      <div class="col l2"><button type="submit"  class="waves-effect waves-light btn orange darken-4" onclick="return mensaje()" >Agregar</button></div>
+      <div class="col l2"><button type="submit"  class="waves-effect waves-light btn orange darken-4" onclick="return mensaje()" >Ajouter</button></div>
        </form>
         </div>
          
@@ -117,23 +112,23 @@
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
-                <h5 class="white-text">Aplicación MVC</h5>
-                <p class="grey-text text-lighten-4">N1013</p>
+                <h5 class="white-text">Application e_commerce</h5>
+                <p class="grey-text text-lighten-4">2018</p>
               </div>    
               <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Navegación</h5>
+                <h5 class="white-text">Navigation</h5>
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="index.jsp">Inicio</a></li>
-                  <li><a class="grey-text text-lighten-3" href="<%=inicioNombreCarro%>">Carrito</a></li>
-                  <li><a class="grey-text text-lighten-3" href="<%=inicioHistorial%>">Historial de Compra</a></li>
+                  <li><a class="grey-text text-lighten-3" href="index.jsp">Accueil</a></li>
+                  <li><a class="grey-text text-lighten-3" href="<%=inicioNombreCarro%>">Panier</a></li>
+                  <li><a class="grey-text text-lighten-3" href="<%=inicioHistorial%>">Historiques des commandes</a></li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="footer-copyright">
             <div class="container">
-            © 2016 Angel Gómez
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            © 2018 Perreaut Florian et Sagar Gueye
+            <a class="grey-text text-lighten-4 right" href="#!"></a>
             </div>
           </div>
         </footer>

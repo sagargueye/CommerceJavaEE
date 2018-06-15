@@ -2,11 +2,34 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group>
             <file>file:/Z:/java%20EE/CommerceJavaEE/commerceshoes/src/java/controler/c_accueil.java</file>
             <file>file:/Z:/java%20EE/CommerceJavaEE/commerceshoes/src/java/controler/servlet.java</file>
             <file>file:/Z:/java%20EE/CommerceJavaEE/commerceshoes/src/java/modele/classeMain.java</file>
             <file>file:/Z:/java%20EE/CommerceJavaEE/commerceshoes/src/java/controler/c_connexion.java</file>
         </group>
+=======
+<<<<<<< HEAD
+        <group>
+            <file>file:/Z:/Bureau/CommerceJavaEE/commerceshoes/src/java/controler/c_connexion.java</file>
+            <file>file:/Z:/Bureau/CommerceJavaEE/commerceshoes/web/css.css</file>
+            <file>file:/Z:/Bureau/CommerceJavaEE/commerceshoes/web/connexion.jsp</file>
+            <file>file:/Z:/Bureau/CommerceJavaEE/commerceshoes/web/header.jsp</file>
+            <file>file:/Z:/Bureau/CommerceJavaEE/commerceshoes/web/boutique.jsp</file>
+            <file>file:/Z:/Bureau/CommerceJavaEE/commerceshoes/web/jsp.jsp</file>
+            <file>file:/Z:/Bureau/CommerceJavaEE/commerceshoes/web/boutique.css</file>
+            <file>file:/Z:/Bureau/CommerceJavaEE/commerceshoes/web/cssConnexion.css</file>
+            <file>file:/Z:/Bureau/CommerceJavaEE/commerceshoes/src/java/modele/JDBC.java</file>
+            <file>file:/Z:/Bureau/CommerceJavaEE/commerceshoes/web/inscription.css</file>
+            <file>file:/Z:/Bureau/CommerceJavaEE/commerceshoes/src/java/controler/c_accueil.java</file>
+            <file>file:/Z:/Bureau/CommerceJavaEE/commerceshoes/web/inscription.jsp</file>
+            <file>file:/Z:/Bureau/CommerceJavaEE/commerceshoes/src/java/modele/classeMain.java</file>
+            <file>file:/Z:/Bureau/CommerceJavaEE/commerceshoes/web/compte.jsp</file>
+        </group>
+=======
+        <group/>
+>>>>>>> 027d1b8b1e7007b0ed95dae82a0f0aec51a5c853
+>>>>>>> 8a271b2dec462303af9f7c712b160653acdb0f7c
     </open-files>
 </project-private>

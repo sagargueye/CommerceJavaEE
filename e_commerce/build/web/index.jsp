@@ -1,8 +1,4 @@
-<%-- 
-    Document   : index
-    Created on : 24/11/2016, 03:00:25 PM
-    Author     : clases
---%>    
+ 
 
 <%@page import="java.util.ArrayList"%>
 <%@page import="beans.Producto"%>
@@ -14,39 +10,39 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-         <!--Import Google Icon Font-->
+
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <!--Import materialize.css-->
+
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
          <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 
-        <!--Let browser know website is optimized for mobile-->
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Compramelo</title>
+        <title>e_commerce</title>
     </head>
     <body>
         
-            
-           <!-- Inicio de Producto -->
+
+        
      <c:import url="/ProductLoad" /> 
         <%  //Llama los productos
             ArrayList<Producto> productos =(ArrayList<Producto>) session.getAttribute("productsLista"); 
             //session.setAttribute("productos", productos);
         %>
-      <!--Import jQuery before materialize.js-->
+
       <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script type="text/javascript" src="js/muhScript.js"></script>
-      <!--We do dis -->
+
         
      <nav>       
     <div class="nav-wrapper orange lighten-1">
-      <a href="index.jsp" class="brand-logo">Compramelo</a>
+      <a href="index.jsp" class="brand-logo">e_commerce</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
           
          
           <%
-              String inicioONombre="Iniciar Sesion";
+              String inicioONombre="Se Connecter";
               String hrefDeLogin="#loginModal";
               if(session.getAttribute("usuario")!=null){
                inicioONombre="Bienvenido, ";
@@ -57,7 +53,7 @@
           
     %>
             
-    <li><a href="<%=hrefDeLogin%>"><%=inicioONombre%></a></li>      <!-- //cambia-->
+    <li><a href="<%=hrefDeLogin%>"><%=inicioONombre%></a></li>     
         <% String inicioNombreCarro="Carrito.jsp";
             String href404="Notfound.jsp";
          if(session.getAttribute("carroData")==null){
@@ -65,39 +61,39 @@
         }
         %>
     
-        <li><a href="<%=inicioNombreCarro%>">Carrito</a></li>            <!--  //cambia-->
+        <li><a href="<%=inicioNombreCarro%>">Panier</a></li>            
         <% String inicioHistorial="Historial.jsp";
          if(session.getAttribute("compra")==null){
          inicioHistorial=href404;
         }
         %>
        
-        <li><a href="<%=inicioHistorial%>">Historial de Compras</a></li>           <!-- //cambia-->
+        <li><a href="<%=inicioHistorial%>">Historique des commandes</a></li>        
       </ul>
     </div>
       </nav>
     
-    <!-- MODALS -->        
+        
     <div id="loginModal" class="modal">
     <div class="modal-content">
         <form action="LogInServlet" method="post">
       <div class="input-field col s6">
           <input id="email" name="usuario" type="text" class="validate">
-          <label for="email">Correo</label>
+          <label for="email">Email</label>
         </div>
         <div class="input-field col s6">
           <input id="password" name="contrasena" type="text" class="validate">
-          <label for="password">Contraseña</label>
-          <button type="submit"  class="waves-effect waves-light btn orange darken-3">Iniciar</button>
+          <label for="password">Mot de passe</label>
+          <button type="submit"  class="waves-effect waves-light btn orange darken-3">Inscription</button>
     </div>
         </form>
     </div>
     <div class="modal-footer">
-        <p>No tienes una cuenta aún?</p>
+        <p>Vous n'avez pas encore de compte?</p>
         <input type="button" class="waves-effect waves-light btn orange darken-4" value="Crear">
-     <!-- <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a> -->
+
     </div>
-  </div>     <!-- //cambia-->
+  </div>   
   
   <script type="text/javascript">
     
@@ -200,7 +196,7 @@
       <div class="row">
        
    <% 
-    // Carga los productos
+    
     
    for(int i=0;i<productos.size();i++){
        
@@ -227,42 +223,42 @@
                  <input type="hidden" name="idCurrent" value="<%=i%>" id="idCurrent"/>
                   
         
-                 <button class="waves-effect waves-light btn orange darken-3" type="submit" name="botonComprar">Comprar</button>
+                 <button class="waves-effect waves-light btn orange darken-3" type="submit" name="botonComprar">Acheter</button>
               </form>
               </div>
 
               <div class="card-reveal" style="display: none; transform: translateY(0px);">
-                <span class="card-title grey-text text-darken-4">Descripción<i class="material-icons right">close</i></span>
+                <span class="card-title grey-text text-darken-4">Description<i class="material-icons right">Fermer</i></span>
                 <p><%=productos.get(i).getDescripcionProducto()%></p>
               </div>
             </div>
           </div>
-          <!-- Final de Producto -->
+    
           <% }%>
-      </div> <!--row -->
-      </div> <!--container -->
+      </div> 
+      </div> 
       
      <footer class="page-footer orange darken-4">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
-                <h5 class="white-text">Aplicación MVC</h5>
-                <p class="grey-text text-lighten-4">N1013</p>
+                <h5 class="white-text">Application e-commerce</h5>
+                <p class="grey-text text-lighten-4">2018</p>
               </div>    
               <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Navegación</h5>
+                <h5 class="white-text">Navigation</h5>
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="index.jsp">Inicio</a></li>
-                  <li><a class="grey-text text-lighten-3" href="<%=inicioNombreCarro%>">Carrito</a></li>
-                  <li><a class="grey-text text-lighten-3" href="<%=inicioHistorial%>">Historial de Compra</a></li>
+                  <li><a class="grey-text text-lighten-3" href="index.jsp">Accueil</a></li>
+                  <li><a class="grey-text text-lighten-3" href="<%=inicioNombreCarro%>">Panier</a></li>
+                  <li><a class="grey-text text-lighten-3" href="<%=inicioHistorial%>">Historiques des commandes</a></li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="footer-copyright">
             <div class="container">
-            © 2016 Angel Gómez
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            © 2018 Perreaut Florian et Sagar Gueye
+            <a class="grey-text text-lighten-4 right" href="#!"></a>
             </div>
           </div>
         </footer>
