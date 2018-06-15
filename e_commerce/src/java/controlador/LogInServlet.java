@@ -77,11 +77,11 @@ boolean infoconnexion;
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        
         String username= request.getParameter("username");     
         String password= request.getParameter("password");
+        
         infoconnexion = classeMain.verifyconnextion(username ,password);
+        
         String message_connexion;
         if (infoconnexion==false){
             message_connexion="mot de passe ou identifiant incorrecte";  

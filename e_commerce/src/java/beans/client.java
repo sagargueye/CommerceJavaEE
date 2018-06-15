@@ -12,18 +12,18 @@ import java.util.ArrayList;
  * @author p1623082
  */
 public class client {
-     protected double numclient;
+     protected String numclient;
      protected String nomclient;
      protected String prenomclient;
      protected String adresse;
      protected double telephone;
      protected String mail;
-     protected double mdpsession;
+     protected String mdpsession;
      //une table qui gere les commandes du client
      private ArrayList<Compra> listecommande;
 
-    public client(double numclient, String nomclient, String prenomclient, 
-            String adresse, double telephone, String mail, double mdpsession) {
+    public client(String numclient, String nomclient, String prenomclient, 
+            String adresse, double telephone, String mail, String mdpsession) {
         this.numclient = numclient;
         this.nomclient = nomclient;
         this.prenomclient = prenomclient;
@@ -33,6 +33,11 @@ public class client {
         this.mdpsession = mdpsession;
         //initialisation de la liste des commandes
         listecommande=new ArrayList<Compra>();
+    }
+
+    public client(String numclient, String mdpsession) {
+        this.numclient = numclient;
+        this.mdpsession = mdpsession;
     }
 
     //afficher client
@@ -71,7 +76,7 @@ public class client {
         }
     }*/
 
-    public double getNumclient() {
+    public String getNumclient() {
         return numclient;
     }
 
@@ -83,7 +88,7 @@ public class client {
         return prenomclient;
     }
 
-    public double getMdpsession() {
+    public String getMdpsession() {
         return mdpsession;
     }
 

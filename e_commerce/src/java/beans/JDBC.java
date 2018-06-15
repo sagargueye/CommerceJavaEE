@@ -44,7 +44,7 @@ public class JDBC {
         Connection dbConnection = null;
         Statement statement = null;
 
-        String selectTableSQL = "SELECT * from CLIENT ";
+        String selectTableSQL = "SELECT * from CLIENT1 ";
 
         try {
             dbConnection = getDBConnection();
@@ -56,13 +56,11 @@ public class JDBC {
             ResultSet rs = statement.executeQuery(selectTableSQL);
 
             while (rs.next()) {
-                String nom = rs.getString("nomclient");
-                String prenom = rs.getString("prenomclient");
-                String adresse = rs.getString("adresse");
-                String mail = rs.getString("mail");
+                String numclient = rs.getString("NUMCLIENT");
+                String MDP = rs.getString("MDP");
+                
                 //on creer un objet avec les données recuperées depuis la BD
-                client c = new client(rs.getInt(1),nom,prenom,
-                        adresse,rs.getInt(5),mail,rs.getInt(7));
+                client c = new client(numclient, MDP);
                 //on stock l'objet dans le tableau
                 listclient.add(c);
             }

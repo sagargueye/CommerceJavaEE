@@ -56,14 +56,7 @@
 
                 <p class="credits">Développé par des <a href="https://etu.univ-lyon1.fr" target="_blank">ETUDIANT de L'IUT Lyon 1</a>.</p>
 
-<<<<<<< HEAD
-=======
 
-                <p class="credits">Développé par <a href="http://www.monsite.com" target="_blank">une super agence</a>.</p>
-                
-                
-              
->>>>>>> 8a271b2dec462303af9f7c712b160653acdb0f7c
 
             </div>
             </div>

@@ -17,15 +17,16 @@ public class classeMain {
     static ArrayList<client> listeclient;
     
     public static void main(String[] args) {
-        client c1= new client(5,"gh","gn","hn",198,"jhg",4);
+        boolean r= verifyconnextion("12","12");
+        System.out.println(r );
         try {
        listeclient=JDBC.selectClientFromDB();
         } catch (Exception exp) {
                System.out.println("ca marche pas");
         }
         for (client s : listeclient) {
-            double id = s.getNumclient();
-            double mdp = s.getMdpsession();
+            String id = s.getNumclient();
+            String mdp = s.getMdpsession();
             System.out.println(id + "    test  "+ mdp );
         }
     }
@@ -39,10 +40,12 @@ public class classeMain {
              }
             for (client s : listeclient) {
                 //double idbd = s.getNumclient();
-                double mdpbd = s.getMdpsession();
+                String mdpbd = s.getMdpsession();
                 String idbd = String.valueOf(s.getNumclient());
                 if(id.equals(idbd) && mdp.equals(mdpbd)){
-                    return true;
+                    
+                   System.out.println(" esk ca pasee dans boucle");
+                   return true;
                 }
             }
 
