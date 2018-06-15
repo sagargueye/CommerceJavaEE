@@ -25,42 +25,11 @@
         
 <%-- -------------------l'entête-------------------------------------------------%>
         <div class="header">
-<<<<<<< HEAD
-<<<<<<< HEAD
-             <%@include file="header.jsp" %>
-=======
-            <div id="logo"> 
-=======
-    <div id="logo"> 
->>>>>>> 35e7c4e9cb63e91dee25f81c6b017b04ce7a4f09
-              
-           <%--  <h1>Hello World!</h1>
-            <hr>
-                  <h2>Hello World!</h2>  
-            <hr>--%>
-<<<<<<< HEAD
->>>>>>> e825020a100dc1682bbc7f9b6ca9cb554fa56be7
-=======
 
->>>>>>> 35e7c4e9cb63e91dee25f81c6b017b04ce7a4f09
-        </div>
-        
+             <%@include file="header.jsp" %>
+      
 <%-- -------------------contenue de la page d'accueil----------------------------%>
-        <div class="contenue">
-            <img src="image/image3.jpg" border="1"  alt="image1" > 
-            <img src="image/img2.jpg" alt="..." >
-            
-            <%--
-<span class="border border-secondary"></span>
-<span class="border border-success"></span>
-<span class="border border-danger"></span>
-<span class="border border-warning"></span>
-<span class="border border-info"></span>
-<span class="border border-light"></span>
-<span class="border border-dark"></span>
-<span class="border border-white"></span>--%>
-        </div>
-        
+
 <%--------------------- pied de page---------------------------------------------%>
        <div class="footerclasse">
             <%@include file="footer.jsp" %>

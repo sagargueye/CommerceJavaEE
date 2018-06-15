@@ -18,7 +18,7 @@
         <div class="header">
             <div id="logo"> 
                 <h1> <img src="image/logo1.png" border="5" alt="logo"> 
-                Shoes shop</h1>
+                Cloud</h1>
             </div>
            <hr> <div id="bande_horizontale" >
                 <line id="onglets">
@@ -43,13 +43,5 @@
             </div></hr>
         </div>
         
-
-<<<<<<< HEAD
-
-
-             
->>>>>>> e825020a100dc1682bbc7f9b6ca9cb554fa56be7
-=======
->>>>>>> 35e7c4e9cb63e91dee25f81c6b017b04ce7a4f09
     </body>
 </html>
