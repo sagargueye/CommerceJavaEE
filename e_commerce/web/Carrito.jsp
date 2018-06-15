@@ -75,11 +75,11 @@
     <div class="modal-content">
         <form action="LogInServlet" method="post">
       <div class="input-field col s6">
-          <input id="email" name="usuario" type="text" class="validate">
+          <input id="email" name="username" type="text" class="validate">
           <label for="email">Correo</label>
         </div>
         <div class="input-field col s6">
-          <input id="password" name="contrasena" type="text" class="validate">
+          <input id="password" name="password" type="text" class="validate">
           <label for="password">Contraseña</label>
           <button type="submit"  class="waves-effect waves-light btn orange darken-3">Iniciar</button>
     </div>

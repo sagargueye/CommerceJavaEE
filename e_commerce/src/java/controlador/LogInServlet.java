@@ -6,8 +6,10 @@
 package controlador;
 
 import beans.Usuario;
+import beans.classeMain;
 import java.io.IOException;
 import java.io.PrintWriter;
+import static java.lang.System.out;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
@@ -20,8 +22,9 @@ import javax.servlet.http.HttpSession;
  *
  * @author tenshi16
  */
-public class LogInServlet extends HttpServlet {
 
+public class LogInServlet extends HttpServlet {
+boolean infoconnexion;
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -76,19 +79,29 @@ public class LogInServlet extends HttpServlet {
             throws ServletException, IOException {
         
         
-         String name=request.getParameter("usuario");  
-        String password=request.getParameter("contrasena");  
-          
-        if(password.equals("1234") && name.equals("tenshi")){  
-       HttpSession session=request.getSession();  
-        session.setAttribute("usuario",name); // agregar el email como sesion 
-        // RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
-       // rd.forward(request, response);
-         response.sendRedirect("index.jsp");
-        }  
-        else{  
-       
-    }
+        String username= request.getParameter("username");     
+        String password= request.getParameter("password");
+        infoconnexion = classeMain.verifyconnextion(username ,password);
+        String message_connexion;
+        if (infoconnexion==false){
+            message_connexion="mot de passe ou identifiant incorrecte";  
+            //response.sendRedirect("Notfound.jsp");
+            System.out.println(" ca ne marche pas");
+	request.setAttribute( "test", message_connexion );
+	this.getServletContext().getRequestDispatcher("/index.jsp").forward( request, response );
+        }else {
+            HttpSession session=request.getSession();  
+            session.setAttribute("username",username); // agregar el email como sesion 
+            // RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+           // rd.forward(request, response);
+             //response.sendRedirect("index.jsp");
+            // System.out.println(" ca marche");
+             message_connexion="mot de passe ou identifiant correcte";  
+             request.setAttribute( "test", message_connexion );
+	this.getServletContext().getRequestDispatcher("/notfound.jsp").forward( request, response );
+             
+       }
+        
     }
 
     /**
