@@ -98,7 +98,29 @@ public class c_connexion extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-          
+          ServletConfig config=getServletConfig();
+            String username= request.getParameter("username");     
+            String password= request.getParameter("password");
+            infoconnexion = classeMain.verifyconnextion(username ,password);
+            String message_connexion;
+            if (infoconnexion==false){
+            message_connexion="mot de passe ou identifiant incorrecte";  
+            //response.sendRedirect("Notfound.jsp");
+            System.out.println(" ca ne marche pas");
+            request.setAttribute( "test", message_connexion );
+            this.getServletContext().getRequestDispatcher("/header.jsp").forward( request, response );
+        }else {
+            HttpSession session=request.getSession();  
+            session.setAttribute("username",username); // agregar el email como sesion 
+            // RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+           // rd.forward(request, response);
+             //response.sendRedirect("index.jsp");
+            // System.out.println(" ca marche");
+             message_connexion="mot de passe ou identifiant correcte";  
+             request.setAttribute( "test", message_connexion );
+	this.getServletContext().getRequestDispatcher("/inscription.jsp").forward( request, response );
+             
+       }
         String message = "Transmission de variables : OK !";
 	request.setAttribute( "test", message );
 	this.getServletContext().getRequestDispatcher("/connexion.jsp").forward( request, response );        
