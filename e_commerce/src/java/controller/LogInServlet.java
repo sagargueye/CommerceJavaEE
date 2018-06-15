@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controlador;
+package controller;
 
-import beans.Utilisateur;
-import beans.classeMain;
+import model.Utilisateur;
+import model.classeMain;
 import java.io.IOException;
 import java.io.PrintWriter;
 import static java.lang.System.out;

@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controlador;
+package controller;
 
-import beans.Panier;
-import beans.Commande;
+import model.Panier;
+import model.Commande;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Timestamp;

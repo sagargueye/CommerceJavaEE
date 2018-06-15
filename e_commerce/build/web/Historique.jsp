@@ -1,9 +1,9 @@
 
 
-<%@page import="beans.Commande"%>
+<%@page import="model.Commande"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="beans.Produit"%>
-<%@page import="beans.Utilisateur"%>
+<%@page import="model.Produit"%>
+<%@page import="model.Utilisateur"%>
 <%@page import="java.lang.Object"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

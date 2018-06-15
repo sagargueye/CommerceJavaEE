@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controlador;
+package controller;
 
-import beans.Produit;
+import model.Produit;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
