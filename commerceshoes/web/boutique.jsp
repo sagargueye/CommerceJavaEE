@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+  <%@include file="header.jsp" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,9 +15,9 @@
     </head>
     <body>
         
-        <%@include file="header.jsp" %>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
         
-       <h1>Hello World!</h1>
         
   <h2 style="text-align:center">Responsive Pricing Tables</h2>
 <p style="text-align:center">Resize the browser window to see the effect.</p>

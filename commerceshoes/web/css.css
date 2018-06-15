@@ -48,7 +48,7 @@ background-color: #95E2E5;
 #onglets li.active
 {
     border-bottom: none;
-    background-color: lightpink;
+    background-color: #0068DF;
 }
 #onglets a
 {

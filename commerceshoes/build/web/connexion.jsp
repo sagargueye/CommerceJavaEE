@@ -36,7 +36,7 @@
             <div class="row">
             <div class="col-xs-12 col-sm-6 col-sm-offset-1">
                         
-                <h1> Shoes shop </h1>
+                <h1> Cloud Shop </h1>
                 <h2>Connexion</h2>
                         
                 <form action="c_connexion" name="login" role="form" class="form-horizontal" method="post" accept-charset="utf-8">
@@ -56,15 +56,12 @@
 
                 <p class="credits">Développé par des <a href="https://etu.univ-lyon1.fr" target="_blank">ETUDIANT de L'IUT Lyon 1</a>.</p>
 
-<<<<<<< HEAD
+
                 <p class="credits">Développé par <a href="http://www.monsite.com" target="_blank">une super agence</a>.</p>
                 
                 
-                
-                
+              
 
-=======
->>>>>>> 35e7c4e9cb63e91dee25f81c6b017b04ce7a4f09
             </div>
             </div>
             
