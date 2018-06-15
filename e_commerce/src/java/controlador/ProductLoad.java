@@ -200,10 +200,10 @@ public class ProductLoad extends HttpServlet {
         HttpSession session=request.getSession();  
         session.setAttribute("current",current);  
         
-         //RequestDispatcher rd = getServletContext().getRequestDispatcher("Agregar.jsp");
+         //RequestDispatcher rd = getServletContext().getRequestDispatcher("Ajouter.jsp");
          //rd.forward(request, response);
          //rd.forward(request, response);
-        response.sendRedirect("Agregar.jsp");
+        response.sendRedirect("Ajouter.jsp");
         
         //processRequest(request, response);
     }

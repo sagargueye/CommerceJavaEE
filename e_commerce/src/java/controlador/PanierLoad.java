@@ -5,7 +5,7 @@
  */
 package controlador;
 
-import beans.Carrito;
+import beans.Panier;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -19,7 +19,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author clases
  */
-public class CarritoLoad extends HttpServlet {
+public class PanierLoad extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,10 +38,10 @@ public class CarritoLoad extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet CarritoLoad</title>");            
+            out.println("<title>Servlet PanierLoad</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet CarritoLoad at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet PanierLoad at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -80,7 +80,7 @@ public class CarritoLoad extends HttpServlet {
         }
         else{
         
-        Carrito carroACambiar= (Carrito) session.getAttribute("carroData");
+        Panier carroACambiar= (Panier) session.getAttribute("carroData");
         
         int productoACambiar= Integer.parseInt(request.getParameter("productoACambiar"));
         int cantidadACambiar=Integer.parseInt(request.getParameter("cantidadACambiar"));
@@ -88,27 +88,27 @@ public class CarritoLoad extends HttpServlet {
         
         System.out.println("producto a cambiar:"+ productoACambiar);
         System.out.println("cantidad a cambiar:"+ cantidadACambiar);
-        int indexProducto =carroACambiar.getProductoCarrito().indexOf(productoACambiar);
+        int indexProducto =carroACambiar.getProductoPanier().indexOf(productoACambiar);
         if(cantidadACambiar==0){// quitar Producto
             
        
-        carroACambiar.getExistenciaProductoCarrito().remove(indexProducto);
-        carroACambiar.getProductoCarrito().remove(indexProducto);
+        carroACambiar.getExistenciaProductoPanier().remove(indexProducto);
+        carroACambiar.getProductoPanier().remove(indexProducto);
         
         session.setAttribute("carroData",carroACambiar);
-       // session.setAttribute("elementosActualesCarrito",carroACambiar.getExistenciaProductoCarrito().size());
-        response.sendRedirect("Carrito.jsp");
+       // session.setAttribute("elementosActualesPanier",carroACambiar.getExistenciaProductoPanier().size());
+        response.sendRedirect("Panier.jsp");
         }
         
         else{
-            int actual= carroACambiar.getExistenciaProductoCarrito().get(indexProducto);
-            ArrayList<Integer> existenciaCambioCarrito = new ArrayList<Integer>();
-            existenciaCambioCarrito=carroACambiar.getExistenciaProductoCarrito();
-            existenciaCambioCarrito.set(indexProducto, cantidadACambiar);
-            carroACambiar.setExistenciaProductoCarrito(existenciaCambioCarrito);
+            int actual= carroACambiar.getExistenciaProductoPanier().get(indexProducto);
+            ArrayList<Integer> existenciaCambioPanier = new ArrayList<Integer>();
+            existenciaCambioPanier=carroACambiar.getExistenciaProductoPanier();
+            existenciaCambioPanier.set(indexProducto, cantidadACambiar);
+            carroACambiar.setExistenciaProductoPanier(existenciaCambioPanier);
             
             session.setAttribute("carroData",carroACambiar);
-            response.sendRedirect("Carrito.jsp");
+            response.sendRedirect("Panier.jsp");
         }
           //processRequest(request, response);
         }   

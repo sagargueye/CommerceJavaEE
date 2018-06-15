@@ -54,7 +54,7 @@
     %>
             
     <li><a href="<%=hrefDeLogin%>"><%=inicioONombre%></a></li>     
-        <% String inicioNombreCarro="Carrito.jsp";
+        <% String inicioNombreCarro="Panier.jsp";
             String href404="Notfound.jsp";
          if(session.getAttribute("carroData")==null){
          inicioNombreCarro=href404;
@@ -62,7 +62,7 @@
         %>
     
         <li><a href="<%=inicioNombreCarro%>">Panier</a></li>            
-        <% String inicioHistorial="Historial.jsp";
+        <% String inicioHistorial="Historique.jsp";
          if(session.getAttribute("compra")==null){
          inicioHistorial=href404;
         }
@@ -90,7 +90,7 @@
     </div>
     <div class="modal-footer">
         <p>Vous n'avez pas encore de compte?</p>
-        <input type="button" class="waves-effect waves-light btn orange darken-4" value="Crear">
+        <input type="button" class="waves-effect waves-light btn orange darken-4" value="Creer">
 
     </div>
   </div>   
