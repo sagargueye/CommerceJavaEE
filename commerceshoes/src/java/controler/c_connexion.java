@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.*;  
 import javax.servlet.*;  
 import javax.servlet.http.*; 
+import modele.classeMain;
 
 /**
  *
@@ -30,6 +31,8 @@ public class c_connexion extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    boolean infoconnexion;
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -42,7 +45,11 @@ public class c_connexion extends HttpServlet {
             ServletConfig config=getServletConfig();
             String username= request.getParameter("username");     
             String password= request.getParameter("password");
-            
+            infoconnexion = classeMain.verifyconnextion(username ,password);
+            String message_connexion;
+            if (infoconnexion==false){
+                message_connexion="mot de passe ou identifiant incorrecte";           
+            }
             out.println("<table><tr><td>"+username+"</td></tr>  <tr><td>"+password+"</td></tr>");
             
             System.out.println(username);
