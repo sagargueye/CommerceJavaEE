@@ -71,7 +71,7 @@
     <div class="modal-content">
         <form action="LogInServlet" method="post">
       <div class="input-field col s6">
-<<<<<<< HEAD
+
           <input id="email" name="username" type="text" class="validate">
           <label for="email">Correo</label>
         </div>

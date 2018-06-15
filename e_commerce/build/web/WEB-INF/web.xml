@@ -13,11 +13,11 @@
         <servlet-class>controlador.AddToCart</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>CarritoLoad</servlet-name>
-        <servlet-class>controlador.CarritoLoad</servlet-class>
+        <servlet-name>PanierLoad</servlet-name>
+        <servlet-class>controlador.PanierLoad</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>Comprar</servlet-name>
+        <servlet-name>Demander</servlet-name>
         <servlet-class>controlador.Commander</servlet-class>
     </servlet>
     <servlet-mapping>
@@ -33,12 +33,12 @@
         <url-pattern>/AddToCart</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>CarritoLoad</servlet-name>
-        <url-pattern>/CarritoLoad</url-pattern>
+        <servlet-name>PanierLoad</servlet-name>
+        <url-pattern>/PanierLoad</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>Comprar</servlet-name>
-        <url-pattern>/Comprar</url-pattern>
+        <servlet-name>Demander</servlet-name>
+        <url-pattern>/Demander</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
