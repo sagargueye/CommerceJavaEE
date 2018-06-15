@@ -11,6 +11,11 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Cookie;
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.net.*;
 
 /**
  *
@@ -29,6 +34,10 @@ public class c_compte extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        //creation d'un cookie
+        Cookie MonCookie= new Cookie ("MonCookie", "250");
+        MonCookie.setMaxAge(24*3600);
+        response.addCookie(MonCookie);
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
@@ -56,9 +65,16 @@ public class c_compte extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        
-           String message = "Transmission de variables : OK !";
+        HttpSession session = request.getSession(true);
+       Cookie[] cookies = request.getCookies();
+       int i;
+         for(i=0; i < cookies.length; i++) {
+         Cookie MonCookie= cookies[i];
+         if (MonCookie.getName().equals("MonCookie")) {
+         String Valeur = cookies[i].getValue();
+         }
+       }
+        String message = "Transmission de variables : OK !";
 	request.setAttribute( "test", message );
 	this.getServletContext().getRequestDispatcher("/compte.jsp").forward( request, response );
                

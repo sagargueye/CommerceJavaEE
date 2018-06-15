@@ -38,7 +38,7 @@
                         
                 <h1> Cloud Shop </h1>
                 <h2>Connexion</h2>
-                        
+                       <% //veriable alerte %> 
                 <form action="c_connexion" name="login" role="form" class="form-horizontal" method="post" accept-charset="utf-8">
                     <div class="form-group">
                     <div class="col-md-8"><input name="username" placeholder="Idenfiant" class="form-control" type="text" id="UserUsername"/></div>

@@ -2,6 +2,7 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group>
             <file>file:/Z:/Bureau/CommerceJavaEE/commerceshoes/src/java/controler/c_connexion.java</file>
             <file>file:/Z:/Bureau/CommerceJavaEE/commerceshoes/web/css.css</file>
@@ -18,5 +19,8 @@
             <file>file:/Z:/Bureau/CommerceJavaEE/commerceshoes/src/java/modele/classeMain.java</file>
             <file>file:/Z:/Bureau/CommerceJavaEE/commerceshoes/web/compte.jsp</file>
         </group>
+=======
+        <group/>
+>>>>>>> 027d1b8b1e7007b0ed95dae82a0f0aec51a5c853
     </open-files>
 </project-private>
