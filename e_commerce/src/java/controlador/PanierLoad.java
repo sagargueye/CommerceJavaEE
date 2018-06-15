@@ -88,24 +88,24 @@ public class PanierLoad extends HttpServlet {
         
         System.out.println("producto a cambiar:"+ productoACambiar);
         System.out.println("cantidad a cambiar:"+ cantidadACambiar);
-        int indexProducto =carroACambiar.getProductoPanier().indexOf(productoACambiar);
-        if(cantidadACambiar==0){// quitar Producto
+        int indexProduit =carroACambiar.getProduitPanier().indexOf(productoACambiar);
+        if(cantidadACambiar==0){// quitar Produit
             
        
-        carroACambiar.getExistenciaProductoPanier().remove(indexProducto);
-        carroACambiar.getProductoPanier().remove(indexProducto);
+        carroACambiar.getExistenciaProduitPanier().remove(indexProduit);
+        carroACambiar.getProduitPanier().remove(indexProduit);
         
         session.setAttribute("carroData",carroACambiar);
-       // session.setAttribute("elementosActualesPanier",carroACambiar.getExistenciaProductoPanier().size());
+       // session.setAttribute("elementosActualesPanier",carroACambiar.getExistenciaProduitPanier().size());
         response.sendRedirect("Panier.jsp");
         }
         
         else{
-            int actual= carroACambiar.getExistenciaProductoPanier().get(indexProducto);
+            int actual= carroACambiar.getExistenciaProduitPanier().get(indexProduit);
             ArrayList<Integer> existenciaCambioPanier = new ArrayList<Integer>();
-            existenciaCambioPanier=carroACambiar.getExistenciaProductoPanier();
-            existenciaCambioPanier.set(indexProducto, cantidadACambiar);
-            carroACambiar.setExistenciaProductoPanier(existenciaCambioPanier);
+            existenciaCambioPanier=carroACambiar.getExistenciaProduitPanier();
+            existenciaCambioPanier.set(indexProduit, cantidadACambiar);
+            carroACambiar.setExistenciaProduitPanier(existenciaCambioPanier);
             
             session.setAttribute("carroData",carroACambiar);
             response.sendRedirect("Panier.jsp");

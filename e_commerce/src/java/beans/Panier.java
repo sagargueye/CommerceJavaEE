@@ -29,28 +29,28 @@ public class Panier {
         this.carritoID = carritoID;
     }
 
-    public String getUsuarioEmail() {
+    public String getUtilisateurEmail() {
         return usuarioEmail;
     }
 
-    public void setUsuarioEmail(String usuarioEmail) {
+    public void setUtilisateurEmail(String usuarioEmail) {
         this.usuarioEmail = usuarioEmail;
     }
 
-    public ArrayList<Integer> getProductoPanier() {
+    public ArrayList<Integer> getProduitPanier() {
         return productoPanier;
     }
 
-    public void setProductoPanier(ArrayList<Integer> productoPanier) {
+    public void setProduitPanier(ArrayList<Integer> productoPanier) {
         this.productoPanier = productoPanier;
     }
 
-    public ArrayList<Integer> getExistenciaProductoPanier() {
-        return existenciaProductoPanier;
+    public ArrayList<Integer> getExistenciaProduitPanier() {
+        return existenciaProduitPanier;
     }
 
-    public void setExistenciaProductoPanier(ArrayList<Integer> existenciaProductoPanier) {
-        this.existenciaProductoPanier = existenciaProductoPanier;
+    public void setExistenciaProduitPanier(ArrayList<Integer> existenciaProduitPanier) {
+        this.existenciaProduitPanier = existenciaProduitPanier;
     }
 
     public double getTotalPanier() {
@@ -63,7 +63,7 @@ public class Panier {
     private String carritoID;
     private String usuarioEmail;
     private ArrayList<Integer> productoPanier = new ArrayList<>();
-    private ArrayList<Integer> existenciaProductoPanier = new ArrayList<>();
+    private ArrayList<Integer> existenciaProduitPanier = new ArrayList<>();
     private double totalPanier;
     
     

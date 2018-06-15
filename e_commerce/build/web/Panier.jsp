@@ -2,8 +2,8 @@
 
 <%@page import="beans.Panier"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="beans.Producto"%>
-<%@page import="beans.Usuario"%>
+<%@page import="beans.Produit"%>
+<%@page import="beans.Commande"%>
 <%@page import="java.lang.Object"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -106,11 +106,11 @@
     <!-- Funcion que regresa el total en el carrito-->
     <%! 
         
-        public double total(Panier e,ArrayList<Producto> d, HttpSession session){
+        public double total(Panier e,ArrayList<Produit> d, HttpSession session){
             double total=0;
-         for (int i=0;i<e.getProductoPanier().size();i++){
+         for (int i=0;i<e.getProduitPanier().size();i++){
          
-         total+=d.get(e.getProductoPanier().get(i)).getPrecioProducto()*e.getExistenciaProductoPanier().get(i) ;
+         total+=d.get(e.getProduitPanier().get(i)).getPrecioProduit()*e.getExistenciaProduitPanier().get(i) ;
          
         }
          session.setAttribute("totalPanier",total);
@@ -124,27 +124,27 @@
     
         System.out.println("cuantas veces se llama este jsp?");
         
-        ArrayList<Producto> productos =(ArrayList<Producto>) session.getAttribute("productsLista"); 
+        ArrayList<Produit> productos =(ArrayList<Produit>) session.getAttribute("productsLista"); 
         System.out.println("Vista"+ carroParaVista.getPanierID().toString());
-        System.out.println("Vista"+ carroParaVista.getUsuarioEmail());
-        System.out.println("Vista"+ carroParaVista.getProductoPanier());
-        System.out.println("Vista"+ carroParaVista.getExistenciaProductoPanier());
+        System.out.println("Vista"+ carroParaVista.getUtilisateurEmail());
+        System.out.println("Vista"+ carroParaVista.getProduitPanier());
+        System.out.println("Vista"+ carroParaVista.getExistenciaProduitPanier());
        
         
-        for (int i=0;i<carroParaVista.getProductoPanier().size();i++){
+        for (int i=0;i<carroParaVista.getProduitPanier().size();i++){
             
         
     %>
      <div class="divider"></div>
                 <div class="section">
                      <div class="row">
-                         <div class="col s6 m3 l2"><img class="responsive-img" src="<%= productos.get(carroParaVista.getProductoPanier().get(i)).getImagenProducto() %>"></div>
-                    <div class="col s6 m3 l2"><h5><%= productos.get(carroParaVista.getProductoPanier().get(i)).getNombre_producto() %></h5></div>
-                    <div class="col s6 m3 l2"><p><%= productos.get(carroParaVista.getProductoPanier().get(i)).getPrecioProducto() %></p></div>
+                         <div class="col s6 m3 l2"><img class="responsive-img" src="<%= productos.get(carroParaVista.getProduitPanier().get(i)).getImagenProduit() %>"></div>
+                    <div class="col s6 m3 l2"><h5><%= productos.get(carroParaVista.getProduitPanier().get(i)).getNombre_producto() %></h5></div>
+                    <div class="col s6 m3 l2"><p><%= productos.get(carroParaVista.getProduitPanier().get(i)).getPrecioProduit() %></p></div>
                     <div class="col s6  m3 l2 offset-l4">
-                        <p>Quantité <%=carroParaVista.getExistenciaProductoPanier().get(i) %></p>
+                        <p>Quantité <%=carroParaVista.getExistenciaProduitPanier().get(i) %></p>
                         <form method="post" action="PanierLoad">
-                            <input type="hidden" name="productoACambiar" value="<%= carroParaVista.getProductoPanier().get(i)%>">       
+                            <input type="hidden" name="productoACambiar" value="<%= carroParaVista.getProduitPanier().get(i)%>">       
                             <input type="number" name="cantidadACambiar" required>
                     <button class="waves-effect waves-light btn orange darken-3" type="submit">Actualiser</button>
                         </form>
@@ -154,7 +154,7 @@
      <%} %>
 
      <div id="total">
-         <form action="Comprar" method="post">
+         <form action="Commander" method="post">
              <p>Total: </p>
              <input type="hidden" name="totalAPagar">
              <p><%= total(carroParaVista,productos,session)%>$</p>

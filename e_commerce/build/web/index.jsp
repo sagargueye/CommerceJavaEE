@@ -1,8 +1,8 @@
  
 
 <%@page import="java.util.ArrayList"%>
-<%@page import="beans.Producto"%>
-<%@page import="beans.Usuario"%>
+<%@page import="beans.Produit"%>
+<%@page import="beans.Utilisateur"%>
 <%@page import="java.lang.Object"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -24,9 +24,9 @@
         
 
         
-     <c:import url="/ProductLoad" /> 
+     <c:import url="/ProduitLoad" /> 
         <%  //Llama los productos
-            ArrayList<Producto> productos =(ArrayList<Producto>) session.getAttribute("productsLista"); 
+            ArrayList<Produit> productos =(ArrayList<Produit>) session.getAttribute("productsLista"); 
             //session.setAttribute("productos", productos);
         %>
 
@@ -105,7 +105,7 @@
        //document.getElementById("productBuyOcult").submit();
         $.ajax({
                     type: "post",
-                    url: "ProductLoad", //this is my servlet
+                    url: "ProduitLoad", //this is my servlet
                     data: {idCurrent:idClickeado},
                     success: function(){      
                             console.log("ayyy");
@@ -179,7 +179,7 @@
     </div>
     <div class="modal-footer">
         <div class="row">
-        <input type="button" class="waves-effect waves-light btn orange darken-4" value="Comprar">
+        <input type="button" class="waves-effect waves-light btn orange darken-4" value="Commande">
         <input type="button" class="waves-effect waves-light btn orange darken-3" value="Limpiar Carrito">
         <p>Total: </p>
   
@@ -207,29 +207,29 @@
     <div class="col s12 m4 l3">
             <div class="card medium sticky-action" style="overflow: hidden;">
               <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator responsive-img" src="<%= productos.get(i).getImagenProducto() %>">
+                  <img class="activator responsive-img" src="<%= productos.get(i).getImagenProduit() %>">
               </div>
               <div class="card-content">
                   <p><%= productos.get(i).getNombre_producto()%></p>
 
-                  <p class="precio"><%=productos.get(i).getPrecioProducto()%>$</p>
+                  <p class="precio"><%=productos.get(i).getPrecioProduit()%>$</p>
               </div>
 
               <div class="card-action">
                 <!--<a href="#">Este es un enlace</a>-->
                 <!--<a href="#">Este es un enlace</a> -->
             
-                <form id="productBuyOcult" action="ProductLoad" method="post">
+                <form id="productBuyOcult" action="ProduitLoad" method="post">
                  <input type="hidden" name="idCurrent" value="<%=i%>" id="idCurrent"/>
                   
         
-                 <button class="waves-effect waves-light btn orange darken-3" type="submit" name="botonComprar">Acheter</button>
+                 <button class="waves-effect waves-light btn orange darken-3" type="submit" name="botonCommande">Acheter</button>
               </form>
               </div>
 
               <div class="card-reveal" style="display: none; transform: translateY(0px);">
                 <span class="card-title grey-text text-darken-4">Description<i class="material-icons right">Fermer</i></span>
-                <p><%=productos.get(i).getDescripcionProducto()%></p>
+                <p><%=productos.get(i).getDescripcionProduit()%></p>
               </div>
             </div>
           </div>

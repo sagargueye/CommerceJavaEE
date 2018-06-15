@@ -5,7 +5,7 @@
  */
 package controlador;
 
-import beans.Usuario;
+import beans.Utilisateur;
 import beans.classeMain;
 import java.io.IOException;
 import java.io.PrintWriter;

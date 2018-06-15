@@ -1,8 +1,8 @@
 
 
 <%@page import="java.util.ArrayList"%>
-<%@page import="beans.Producto"%>
-<%@page import="beans.Usuario"%>
+<%@page import="beans.Produit"%>
+<%@page import="beans.Utilisateur"%>
 <%@page import="java.lang.Object"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -23,9 +23,9 @@
     <body>
         <script>
             function mensaje(){
-             if (document.getElementById("cantidadProducto").value.valueOf(!null)){
+             if (document.getElementById("cantidadProduit").value.valueOf(!null)){
                  console.log("etehbe");
-                // Materialize.toast('Producto Agregado', 4000);
+                // Materialize.toast('Produit Agregado', 4000);
                  return true;   
              }
              else {return false;} 
@@ -34,7 +34,7 @@
         </script>
 
         <%  //Llama los productos
-           ArrayList<Producto> productos =(ArrayList<Producto>) session.getAttribute("productsLista"); 
+           ArrayList<Produit> productos =(ArrayList<Produit>) session.getAttribute("productsLista"); 
             
         %>
       <!--Import jQuery before materialize.js-->
@@ -94,14 +94,14 @@
        <div class="row">     
            
                <h4 class="col l6 m8 offset-l4 offset-m4"><%= productos.get(current).getNombre_producto()%></h4>
-     <h5 class="col l6 m8 offset-l6 offset-m5">$<%=productos.get(current).getPrecioProducto()%></h5>
-     <img class="responsive-img col l6 m8 offset-l3 offset-m2" width="60%" src="<%= productos.get(current).getImagenProducto() %>">
+     <h5 class="col l6 m8 offset-l6 offset-m5">$<%=productos.get(current).getPrecioProduit()%></h5>
+     <img class="responsive-img col l6 m8 offset-l3 offset-m2" width="60%" src="<%= productos.get(current).getImagenProduit() %>">
     
-     <p class="col l10 offset-l1"><%=productos.get(current).getDescripcionProducto()%></p> 
+     <p class="col l10 offset-l1"><%=productos.get(current).getDescripcionProduit()%></p> 
      
        <div class="col l1 offset-l4"><p>Quantité: </p></div>
        <form action="AddToCart" method="post">
-       <div class="col l2"><input name="cantidad" id="cantidadProducto" type="number" required min="1" max="<%= productos.get(current).getExistenciaProducto()%>"></div>
+       <div class="col l2"><input name="cantidad" id="cantidadProduit" type="number" required min="1" max="<%= productos.get(current).getExistenciaProduit()%>"></div>
       <div class="col l2"><button type="submit"  class="waves-effect waves-light btn orange darken-4" onclick="return mensaje()" >Ajouter</button></div>
        </form>
         </div>

@@ -101,8 +101,8 @@ public class AddToCart extends HttpServlet {
           
           carroActual= new Panier(carritoID,usuario,12);
           
-          carroActual.setExistenciaProductoPanier(existenciaPanier);
-          carroActual.setProductoPanier(productoParaPanier);
+          carroActual.setExistenciaProduitPanier(existenciaPanier);
+          carroActual.setProduitPanier(productoParaPanier);
           
           session.setAttribute("carrito", carritoID);
           session.setAttribute("carritoArticulo", productoParaPanier);
@@ -129,9 +129,9 @@ public class AddToCart extends HttpServlet {
              int nuevoValor=existenciaPanier2.get(indexArticuloCambiarCantidad)+ Integer.parseInt(request.getParameter("cantidad").toString());
              
              existenciaPanier2.set(indexArticuloCambiarCantidad, nuevoValor);
-              carroActual.setExistenciaProductoPanier(existenciaPanier2);
+              carroActual.setExistenciaProduitPanier(existenciaPanier2);
                System.out.println("ya creado------");
-                System.out.println("Productos en el carrito"+productoParaPanier2);
+                System.out.println("Produits en el carrito"+productoParaPanier2);
                  System.out.println("Cantidad en el carrito"+existenciaPanier2);   
                 
           }
@@ -146,8 +146,8 @@ public class AddToCart extends HttpServlet {
           
           //actualizar valores
           
-          carroActual.setExistenciaProductoPanier(existenciaPanier2);
-          carroActual.setProductoPanier(productoParaPanier2);
+          carroActual.setExistenciaProduitPanier(existenciaPanier2);
+          carroActual.setProduitPanier(productoParaPanier2);
           
           //String carritoID= "asdasd"; // es un update por lo tanto el id se mantiene
           Timestamp timeStamp = new Timestamp(System.currentTimeMillis());
@@ -155,7 +155,7 @@ public class AddToCart extends HttpServlet {
           session.setAttribute("carritoExistencia", existenciaPanier2);
           
           System.out.println("ya creado------");
-          System.out.println("Productos en el carrito"+productoParaPanier2);
+          System.out.println("Produits en el carrito"+productoParaPanier2);
           System.out.println("Cantidad en el carrito"+existenciaPanier2);
          
           

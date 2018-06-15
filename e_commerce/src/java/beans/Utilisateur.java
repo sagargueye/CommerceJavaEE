@@ -9,7 +9,7 @@ package beans;
  *
  * @author tenshi16
  */
-public class Usuario {
+public class Utilisateur {
     
     private String correo;
     private String nombre;
@@ -19,7 +19,7 @@ public class Usuario {
         return correo;
     }
 
-    public Usuario(String correo, String nombre, String contraseña) {
+    public Utilisateur(String correo, String nombre, String contraseña) {
         this.correo = correo;
         this.nombre = nombre;
         this.contraseña = contraseña;

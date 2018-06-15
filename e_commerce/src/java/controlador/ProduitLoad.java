@@ -5,7 +5,7 @@
  */
 package controlador;
 
-import beans.Producto;
+import beans.Produit;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -20,10 +20,10 @@ import javax.servlet.http.HttpSession;
  *
  * @author clases
  */
-public class ProductLoad extends HttpServlet {
+public class ProduitLoad extends HttpServlet {
       private static final long serialVersionUID = 1L;
       
-      public ProductLoad(){
+      public ProduitLoad(){
       super();
       }
 
@@ -44,10 +44,10 @@ public class ProductLoad extends HttpServlet {
            /* out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ProductLoad</title>");            
+            out.println("<title>Servlet ProduitLoad</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ProductLoad at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet ProduitLoad at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");*/
         }
@@ -66,14 +66,14 @@ public class ProductLoad extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-           ArrayList<Producto> list = new ArrayList<Producto>();
-           list.add(new Producto("1","Intel Core i7",334,"With faster,"
+           ArrayList<Produit> list = new ArrayList<Produit>();
+           list.add(new Produit("1","Intel Core i7",334,"With faster,"
                            + " intelligent, multi-core technology that applies processing power where it's needed most, "
                            + "Intel Core i7 processors deliver an incredible breakthrough in PC performance. You'll "
                            + "multitask applications faster and unleash incredible digital media creation. And you'll "
                            + "experience maximum performance for everything you do.",30,"img/1.jpg"));
            
-           list.add(new Producto("2","GeForce GTX 1070",438,"The EVGA GeForce "
+           list.add(new Produit("2","GeForce GTX 1070",438,"The EVGA GeForce "
                            + "GTX 1070 featuring EVGA ACX 3.0 cooling has arrived. This new graphics card features "
                            + "NVIDIA's new \"Pascal\" graphics processor which is the most advanced gaming GPU ever "
                            + "created. This breakthrough GPU delivers industry-leading performance, innovative "
@@ -85,12 +85,12 @@ public class ProductLoad extends HttpServlet {
                            + "bearing and an extreme low power motor, delivering more air flow with less power, unlocking "
                            + "additional power for the GPU.",30,"img/2.jpg"));
            
-           list.add(new Producto("3","Kingston HyperX FURY 8GB",43,"Get in the game with HyperX FURY. Even newbies get "
+           list.add(new Produit("3","Kingston HyperX FURY 8GB",43,"Get in the game with HyperX FURY. Even newbies get "
                            + "up to speed fast, since FURY automatically recognizes its host platform and "
                            + "automatically overclocks to the highest frequency published - up to 1866MHz¹ - "
                            + "providing plenty of power for your next deathmatch.",30,"img/3.jpg"));
            
-           list.add(new Producto("4","Honor 8 Unlocked Phone 32GB",399,"You have"
+           list.add(new Produit("4","Honor 8 Unlocked Phone 32GB",399,"You have"
                    + " the power to push culture forward. That’s why Honor created "
                    + "a phone for you - the new Honor 8. It’s the smartphone that"
                    + " opens your eyes to a world of possibilities. The innovative"
@@ -111,12 +111,12 @@ public class ProductLoad extends HttpServlet {
                    + "and a speedy recharge. The Honor 8: Beautiful design, top-flight specs,"
                    + " game-changing camera technology, and maximum power. Honor 8 - Eyes to "
                    + "the World.",30,"img/4.jpg"));
-            list.add(new Producto ("5","Logitech Z506 Surround Sound Home Theater ", 69,"Logitech surround sound speakers z506—for when you want to be "
+            list.add(new Produit ("5","Logitech Z506 Surround Sound Home Theater ", 69,"Logitech surround sound speakers z506—for when you want to be "
                     + "moved by big, 5.1 surround sound from your music, movies"
                     + " and games.Connectors: 3x 0.14\" / 3.5 mm Audio-In Jacks,"
                     + " 1x 0.14\" / 3.5 mm Headphone Jack, 2x Stereo RCA Input Jacks,"
                     + " 4x RCA Input Jacks for Speaker System and 1x DB-9 Pin Connector.",30,"img/5.jpg"));
-            list.add(new Producto ("6","Dell 15.6-Inch Gaming Laptop",699,"Multi-tasking processing:"
+            list.add(new Produit ("6","Dell 15.6-Inch Gaming Laptop",699,"Multi-tasking processing:"
                     + " With 6th Gen Intel i5 Quad-Core processors, you’ll have all the power you need to "
                     + "enjoy both gaming and entertainment.\n" +
 "\n" +
@@ -127,7 +127,7 @@ public class ProductLoad extends HttpServlet {
                     + "rates in games and accelerates video editing and transcoding.",30,"img/6.jpg"));
             
             
-            list.add(new Producto ("7","Apple 13 Inch MacBook Pro ",923,"The 13-inch"
+            list.add(new Produit ("7","Apple 13 Inch MacBook Pro ",923,"The 13-inch"
                     + " MacBook Pro is designed with the following features to reduce"
                     + " environmental impact, Arsenic-free display glass, Mercury-free"
                     + " LED-backlit display, Brominated flame retardant free, PVC-free, "
@@ -137,22 +137,22 @@ public class ProductLoad extends HttpServlet {
                     + "a smoother, more fluid experience than before. It’s still highly efficient"
                     + ", too, so you get long battery life when you’re out and about.",30,"img/7.jpg"));
             
-            list.add(new Producto ("8","LG Electronics OLED55E6P Flat 55-Inch",2497,"The individually "
+            list.add(new Produit ("8","LG Electronics OLED55E6P Flat 55-Inch",2497,"The individually "
                     + "illuminating OLED pixels can brighten, dim and power off fully to achieve perfect "
                     + "black. That means contrast—the ratio between the lightest and darkest areas of the"
                     + " screen—is truly infinite. Perfect black is essential to a more lifelike image as"
                     + " well as the great shadow detail you can only get with OLED.",30,"img/8.jpg"));
-           list.add(new Producto ("9","Sony PlayStation 4 Pro",438,"PlayStation Store Cards fill your PSN "
+           list.add(new Produit ("9","Sony PlayStation 4 Pro",438,"PlayStation Store Cards fill your PSN "
                    + "account wallet with cash, allowing you to download the newest games, DLC, and videos, "
                    + "as well as stream movies and music, all from the PlayStation Store.",30,"img/9.jpg"));
            
-            list.add(new Producto ("10","Xbox One S 500GB",275,"The Xbox One S 500GB "
+            list.add(new Produit ("10","Xbox One S 500GB",275,"The Xbox One S 500GB "
                     + "Console - Battlefield 1 Bundle includes: Xbox One S 500GB Console,"
                     + " full game download of Battlefield 1, one month of EA Access,"
                     + " Xbox Wireless Controller, HDMI cable (4K Capable), Power cable "
                     + "and a 14-day Xbox Live Gold Trial.",30,"img/10.jpg"));
             
-            list.add(new Producto ("11","Sony PlayStation Vita WiFi",199,"Take the"
+            list.add(new Produit ("11","Sony PlayStation Vita WiFi",199,"Take the"
                     + " greatness of PlayStation on the go with the Ultimate"
                     + " Gamer's Companion. On the PlayStation Vita system, gamers"
                     + " can play over 1,000 PlayStation games, stream PS4 games "
@@ -160,7 +160,7 @@ public class ProductLoad extends HttpServlet {
                     + " and sleek device also features a more immersive gaming experience"
                     + " away from your console and TV.",30,"img/11.jpg"));
             
-            list.add(new Producto ("12","Nintendo 3DS - Cosmo Black",294,"Nintendo"
+            list.add(new Produit ("12","Nintendo 3DS - Cosmo Black",294,"Nintendo"
                     + " 3DS combines all the functionality of 3DS XL at an even "
                     + "more affordable price. Play 3DS and DS games, take 3D photos,"
                     + " and connect with friends with StreetPass and SpotPass.\n" +

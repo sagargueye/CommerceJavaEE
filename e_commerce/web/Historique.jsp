@@ -2,8 +2,8 @@
 
 <%@page import="beans.Commande"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="beans.Producto"%>
-<%@page import="beans.Usuario"%>
+<%@page import="beans.Produit"%>
+<%@page import="beans.Utilisateur"%>
 <%@page import="java.lang.Object"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -29,9 +29,9 @@
         
         %>  
 
-     <c:import url="/ProductLoad" /> 
+     <c:import url="/ProduitLoad" /> 
         <%  
-            ArrayList<Producto> productos =(ArrayList<Producto>) session.getAttribute("productsLista"); 
+            ArrayList<Produit> productos =(ArrayList<Produit>) session.getAttribute("productsLista"); 
             
         %>
 
