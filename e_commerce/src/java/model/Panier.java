@@ -13,28 +13,28 @@ import java.util.ArrayList;
  */
 public class Panier {
 
-    public Panier(String carritoID, String usuarioEmail, double totalPanier) {
-        this.carritoID = carritoID;
-        this.usuarioEmail = usuarioEmail;
+    public Panier(String PanierID, String UtilisateurEmail, double totalPanier) {
+        this.PanierID = PanierID;
+        this.UtilisateurEmail = UtilisateurEmail;
         this.totalPanier = totalPanier;
     }
 
    
 
     public String getPanierID() {
-        return carritoID;
+        return PanierID;
     }
 
-    public void setPanierID(String carritoID) {
-        this.carritoID = carritoID;
+    public void setPanierID(String PanierID) {
+        this.PanierID = PanierID;
     }
 
     public String getUtilisateurEmail() {
-        return usuarioEmail;
+        return UtilisateurEmail;
     }
 
-    public void setUtilisateurEmail(String usuarioEmail) {
-        this.usuarioEmail = usuarioEmail;
+    public void setUtilisateurEmail(String UtilisateurEmail) {
+        this.UtilisateurEmail = UtilisateurEmail;
     }
 
     public ArrayList<Integer> getProduitPanier() {
@@ -60,8 +60,8 @@ public class Panier {
     public void setTotalPanier(double totalPanier) {
         this.totalPanier = totalPanier;
     }
-    private String carritoID;
-    private String usuarioEmail;
+    private String PanierID;
+    private String UtilisateurEmail;
     private ArrayList<Integer> productoPanier = new ArrayList<>();
     private ArrayList<Integer> existenciaProduitPanier = new ArrayList<>();
     private double totalPanier;

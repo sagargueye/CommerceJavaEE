@@ -52,9 +52,9 @@
           <%
               String inicioONombre="Se Connecter";
               String hrefDeLogin="#loginModal";
-              if(session.getAttribute("usuario")!=null){
+              if(session.getAttribute("Utilisateur")!=null){
                inicioONombre="Bienvenido, ";
-               inicioONombre+=session.getAttribute("usuario").toString(); 
+               inicioONombre+=session.getAttribute("Utilisateur").toString(); 
                hrefDeLogin="#";
               }
              

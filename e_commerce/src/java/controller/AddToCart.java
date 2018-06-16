@@ -81,32 +81,32 @@ public class AddToCart extends HttpServlet {
           ArrayList<Integer> productoParaPanier= new ArrayList<Integer>();
           ArrayList<Integer> existenciaPanier= new ArrayList<Integer>();
           HttpSession session=request.getSession();  
-          if (session.getAttribute("carrito")==null){
-                // no hay una sesion de carrito, creacion de carrito desde cero con su ID
+          if (session.getAttribute("Panier")==null){
+                // no hay una sesion de Panier, creacion de Panier desde cero con su ID
           
-          String usuario= (String) session.getAttribute("usuario");
+          String Utilisateur= (String) session.getAttribute("Utilisateur");
           String articulo= (String) session.getAttribute("current");
           String aexistencia =( String) request.getParameter("cantidad");
           int existencia = Integer.parseInt(aexistencia);
           productoParaPanier.add(Integer.parseInt(articulo));
           existenciaPanier.add(existencia);
           
-          String carritoID= "asdasd";
+          String PanierID= "asdasd";
           Timestamp timeStamp = new Timestamp(System.currentTimeMillis());  
           
-          System.out.println("usuario: "+usuario);
+          System.out.println("Utilisateur: "+Utilisateur);
           System.out.println("articulo: "+articulo);
-          System.out.println("carritoID: "+carritoID);
+          System.out.println("PanierID: "+PanierID);
           System.out.println("time stamp "+timeStamp);
           
-          carroActual= new Panier(carritoID,usuario,12);
+          carroActual= new Panier(PanierID,Utilisateur,12);
           
           carroActual.setExistenciaProduitPanier(existenciaPanier);
           carroActual.setProduitPanier(productoParaPanier);
           
-          session.setAttribute("carrito", carritoID);
-          session.setAttribute("carritoArticulo", productoParaPanier);
-          session.setAttribute("carritoExistencia", existenciaPanier);
+          session.setAttribute("Panier", PanierID);
+          session.setAttribute("PanierArticulo", productoParaPanier);
+          session.setAttribute("PanierExistencia", existenciaPanier);
           
          
           }
@@ -114,13 +114,13 @@ public class AddToCart extends HttpServlet {
               
               
               
-         // aqui ya hay una sesion de carrito (update a la base de datos)
-          String usuario= (String) session.getAttribute("usuario");
+         // aqui ya hay una sesion de Panier (update a la base de datos)
+          String Utilisateur= (String) session.getAttribute("Utilisateur");
           String articulo= (String) session.getAttribute("current");
           
           
-          ArrayList<Integer> productoParaPanier2 =(ArrayList<Integer>) session.getAttribute("carritoArticulo");
-          ArrayList<Integer> existenciaPanier2 =(ArrayList<Integer>) session.getAttribute("carritoExistencia");
+          ArrayList<Integer> productoParaPanier2 =(ArrayList<Integer>) session.getAttribute("PanierArticulo");
+          ArrayList<Integer> existenciaPanier2 =(ArrayList<Integer>) session.getAttribute("PanierExistencia");
           
           if(productoParaPanier2.contains(Integer.parseInt(articulo))){ // Aqui se validan que no se agreguen(sumen) mas de los que hay en stock
           
@@ -131,8 +131,8 @@ public class AddToCart extends HttpServlet {
              existenciaPanier2.set(indexArticuloCambiarCantidad, nuevoValor);
               carroActual.setExistenciaProduitPanier(existenciaPanier2);
                System.out.println("ya creado------");
-                System.out.println("Produits en el carrito"+productoParaPanier2);
-                 System.out.println("Cantidad en el carrito"+existenciaPanier2);   
+                System.out.println("Produits en el Panier"+productoParaPanier2);
+                 System.out.println("Cantidad en el Panier"+existenciaPanier2);   
                 
           }
              else {
@@ -149,14 +149,14 @@ public class AddToCart extends HttpServlet {
           carroActual.setExistenciaProduitPanier(existenciaPanier2);
           carroActual.setProduitPanier(productoParaPanier2);
           
-          //String carritoID= "asdasd"; // es un update por lo tanto el id se mantiene
+          //String PanierID= "asdasd"; // es un update por lo tanto el id se mantiene
           Timestamp timeStamp = new Timestamp(System.currentTimeMillis());
-          session.setAttribute("carritoArticulo", productoParaPanier2);
-          session.setAttribute("carritoExistencia", existenciaPanier2);
+          session.setAttribute("PanierArticulo", productoParaPanier2);
+          session.setAttribute("PanierExistencia", existenciaPanier2);
           
           System.out.println("ya creado------");
-          System.out.println("Produits en el carrito"+productoParaPanier2);
-          System.out.println("Cantidad en el carrito"+existenciaPanier2);
+          System.out.println("Produits en el Panier"+productoParaPanier2);
+          System.out.println("Cantidad en el Panier"+existenciaPanier2);
          
           
           }

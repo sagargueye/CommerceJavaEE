@@ -77,31 +77,52 @@ boolean infoconnexion;
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+         
+        
+       /* 
+          String name=request.getParameter("Utilisateur");  
+        String password=request.getParameter("Motdepasse");  
+          
+        if(password.equals("1234") && name.equals("tenshi")){  
+       HttpSession session=request.getSession();  
+        session.setAttribute("Utilisateur",name); // agregar el email como sesion 
+        // RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+       // rd.forward(request, response);
+         response.sendRedirect("index.jsp");
+        }  
+        else{  
+       
+        response.sendRedirect("index.jsp");    
+    }            
+     
+        */
+       
         String username= request.getParameter("username");     
-        String password= request.getParameter("password");
-        
-        infoconnexion = classeMain.verifyconnextion(username ,password);
-        
-        String message_connexion;
-        if (infoconnexion==false){
-            message_connexion="mot de passe ou identifiant incorrecte";  
-            //response.sendRedirect("Notfound.jsp");
-            System.out.println(" ca ne marche pas");
-	request.setAttribute( "test", message_connexion );
-	this.getServletContext().getRequestDispatcher("/index.jsp").forward( request, response );
-        }else {
-            HttpSession session=request.getSession();  
-            session.setAttribute("username",username); // agregar el email como sesion 
-            // RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
-           // rd.forward(request, response);
-             //response.sendRedirect("index.jsp");
-            // System.out.println(" ca marche");
-             message_connexion="mot de passe ou identifiant correcte";  
-             request.setAttribute( "test", message_connexion );
-	this.getServletContext().getRequestDispatcher("/notfound.jsp").forward( request, response );
-             
-       }
-        
+                String password= request.getParameter("password");
+
+                infoconnexion = classeMain.verifyconnextion(username ,password);
+
+                String message_connexion;
+                if (infoconnexion==false){
+                    message_connexion="mot de passe ou identifiant incorrecte";  
+                    //response.sendRedirect("Notfound.jsp");
+                    System.out.println(" ca ne marche pas");
+                request.setAttribute( "test", message_connexion );
+                this.getServletContext().getRequestDispatcher("/index.jsp").forward( request, response );
+                }else {
+                    HttpSession session=request.getSession();  
+                    session.setAttribute("username",username); // agregar el email como sesion 
+                    // RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+                   // rd.forward(request, response);
+                     //response.sendRedirect("index.jsp");
+                    // System.out.println(" ca marche");
+                     message_connexion="mot de passe ou identifiant correcte";  
+                     request.setAttribute( "test", message_connexion );
+                this.getServletContext().getRequestDispatcher("/notfound.jsp").forward( request, response );
+
+        }       
+       
+       
     }
 
     /**

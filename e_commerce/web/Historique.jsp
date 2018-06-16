@@ -49,9 +49,9 @@
           <%
               String inicioONombre="Se Connecter";
               String hrefDeLogin="#loginModal";
-              if(session.getAttribute("usuario")!=null){
+              if(session.getAttribute("Utilisateur")!=null){
                inicioONombre="Bienvenido, ";
-               inicioONombre+=session.getAttribute("usuario").toString(); 
+               inicioONombre+=session.getAttribute("Utilisateur").toString(); 
                hrefDeLogin="#";
               }
              
@@ -83,11 +83,11 @@
     <div class="modal-content">
         <form action="LogInServlet" method="post">
       <div class="input-field col s6">
-          <input id="email" name="usuario" type="text" class="validate">
+          <input id="email" name="Utilisateur" type="text" class="validate">
           <label for="email">Mail</label>
         </div>
         <div class="input-field col s6">
-          <input id="password" name="contrasena" type="text" class="validate">
+          <input id="password" name="Motdepasse" type="text" class="validate">
           <label for="password">Mot de passe</label>
           <button type="submit"  class="waves-effect waves-light btn orange darken-3">S'inscrire</button>
     </div>

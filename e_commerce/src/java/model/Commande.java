@@ -15,9 +15,9 @@ import java.util.ArrayList;
 public class Commande {
 
    
-    public Commande(String CommandeID, Panier carritoCommandedo,Timestamp timeStampCommande) {
+    public Commande(String CommandeID, Panier PanierCommandedo,Timestamp timeStampCommande) {
         this.CommandeID = CommandeID;
-        this.carritoCommandedo = carritoCommandedo;
+        this.PanierCommandedo = PanierCommandedo;
          this.timeStampCommande = timeStampCommande;
     }
 
@@ -30,15 +30,15 @@ public class Commande {
     }
 
     public Panier getPanierCommandedo() {
-        return carritoCommandedo;
+        return PanierCommandedo;
     }
 
-    public void setPanierCommandedo(Panier carritoCommandedo) {
-        this.carritoCommandedo = carritoCommandedo;
+    public void setPanierCommandedo(Panier PanierCommandedo) {
+        this.PanierCommandedo = PanierCommandedo;
     }
     
     private String CommandeID;
-    private Panier carritoCommandedo;
+    private Panier PanierCommandedo;
 
     public Timestamp getTimeStampCommande() {
         return timeStampCommande;

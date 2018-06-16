@@ -41,7 +41,7 @@ public class Commander extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Commande</title>");            
+            out.println("<title>Servlet Commander</title>");            
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet Commander at " + request.getContextPath() + "</h1>");
@@ -80,8 +80,8 @@ public class Commander extends HttpServlet {
         
         if(session.getAttribute("Commande")==null){
         ArrayList<Commande> Commande = new ArrayList<Commande>();
-        Panier carroParaVistaACompra = (Panier) session.getAttribute("carroData");
-         carroParaVistaACompra.setTotalPanier(Double.parseDouble(session.getAttribute("totalPanier").toString()));
+        Panier carroParaVistaACommande = (Panier) session.getAttribute("carroData");
+         carroParaVistaACommande.setTotalPanier(Double.parseDouble(session.getAttribute("totalPanier").toString()));
          Timestamp timestamp = new Timestamp(System.currentTimeMillis());
          
           String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
@@ -93,20 +93,20 @@ public class Commander extends HttpServlet {
         }
         String saltStr = salt.toString();
          
-         Commande CommandeN= new Commande(saltStr,carroParaVistaACompra,timestamp);
+         Commande CommandeN= new Commande(saltStr,carroParaVistaACommande,timestamp);
          
          Commande.add(CommandeN);
          System.out.println("se agrega, el numero es: "+Commande.size());
          session.setAttribute("Commande", Commande);
          session.setAttribute("carroData", null);
-         session.setAttribute("carrito", null);
+         session.setAttribute("Panier", null);
          response.sendRedirect("Historique.jsp");
         }
         else{
           ArrayList<Commande> Commande= (ArrayList<Commande>) session.getAttribute("Commande");
           
-          Panier carroParaVistaACompra = (Panier) session.getAttribute("carroData");
-         carroParaVistaACompra.setTotalPanier(Double.parseDouble(session.getAttribute("totalPanier").toString()));
+          Panier carroParaVistaACommande = (Panier) session.getAttribute("carroData");
+         carroParaVistaACommande.setTotalPanier(Double.parseDouble(session.getAttribute("totalPanier").toString()));
          Timestamp timestamp = new Timestamp(System.currentTimeMillis());
          
            String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
@@ -119,12 +119,12 @@ public class Commander extends HttpServlet {
         String saltStr = salt.toString();
          
          
-         Commande CommandeN= new Commande(saltStr,carroParaVistaACompra,timestamp);
+         Commande CommandeN= new Commande(saltStr,carroParaVistaACommande,timestamp);
          Commande.add(CommandeN);
          System.out.println("se agrega, el numero es: "+Commande.size());
          session.setAttribute("Commande", Commande);
          session.setAttribute("carroData", null);
-         session.setAttribute("carrito", null);
+         session.setAttribute("Panier", null);
          response.sendRedirect("Historique.jsp");
         }
          
