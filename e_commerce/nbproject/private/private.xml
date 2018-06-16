@@ -3,16 +3,26 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Z:/java%20EE/CommerceJavaEE/e_commerce/web/Carrito.jsp</file>
-            <file>file:/Z:/java%20EE/CommerceJavaEE/e_commerce/src/java/beans/client.java</file>
-            <file>file:/Z:/java%20EE/CommerceJavaEE/e_commerce/src/java/beans/Compra.java</file>
-            <file>file:/Z:/java%20EE/CommerceJavaEE/e_commerce/web/Historial.jsp</file>
-            <file>file:/Z:/java%20EE/CommerceJavaEE/e_commerce/web/Agregar.jsp</file>
-            <file>file:/Z:/java%20EE/CommerceJavaEE/e_commerce/src/java/controlador/LogInServlet.java</file>
-            <file>file:/Z:/java%20EE/CommerceJavaEE/e_commerce/src/java/beans/classeMain.java</file>
-            <file>file:/Z:/java%20EE/CommerceJavaEE/e_commerce/src/java/beans/Usuario.java</file>
-            <file>file:/Z:/java%20EE/CommerceJavaEE/e_commerce/web/index.jsp</file>
-            <file>file:/Z:/java%20EE/CommerceJavaEE/e_commerce/src/java/beans/JDBC.java</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE/e_commerce/src/java/controller/AddToCart.java</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE/e_commerce/web/Historique.jsp</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE/e_commerce/src/java/model/Panier.java</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE/e_commerce/web/Panier.jsp</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE/e_commerce/src/java/model/Commande.java</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE/e_commerce/web/css/materialize.min.css</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE/e_commerce/src/java/model/client.java</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE/e_commerce/web/Notfound.jsp</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE/e_commerce/src/java/controller/ProduitLoad.java</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE/e_commerce/src/java/model/classeMain.java</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE/e_commerce/web/css/materialize.css</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE/e_commerce/src/java/model/Produit.java</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE/e_commerce/web/css/mycss.css</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE/e_commerce/web/Ajouter.jsp</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE/e_commerce/src/java/controller/LogInServlet.java</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE/e_commerce/src/java/model/Utilisateur.java</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE/e_commerce/src/java/model/JDBC.java</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE/e_commerce/src/java/controller/PanierLoad.java</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE/e_commerce/web/index.jsp</file>
+            <file>file:/C:/Users/Florian/Desktop/CommerceJavaEE/e_commerce/src/java/controller/Commander.java</file>
         </group>
     </open-files>
 </project-private>

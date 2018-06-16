@@ -87,14 +87,14 @@
           <input id="password" name="contrasena" type="text" class="validate">
           <label for="password">Mot de passe</label>
           <button type="submit"  class="waves-effect waves-light btn orange darken-3">S'inscrire</button>
->>>>>>> 8a271b2dec462303af9f7c712b160653acdb0f7c
+
     </div>
         </form>
     </div>
     <div class="modal-footer">
         <p>Vous n'avez pas encore de compte?</p>
         <input type="button" class="waves-effect waves-light btn orange darken-4" value="Creer">
-     <!-- <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a> -->
+  
     </div>
   </div>  
     
@@ -103,7 +103,7 @@
     Panier carroParaVista = (Panier) session.getAttribute("carroData");
     
     %>
-    <!-- Funcion que regresa el total en el carrito-->
+
     <%! 
         
         public double total(Panier e,ArrayList<Produit> d, HttpSession session){
@@ -119,7 +119,7 @@
         
         %>
     
-    <!-- A LLENAR -->
+
     <% 
     
         System.out.println("cuantas veces se llama este jsp?");
@@ -157,7 +157,7 @@
          <form action="Commander" method="post">
              <p>Total: </p>
              <input type="hidden" name="totalAPagar">
-             <p><%= total(carroParaVista,productos,session)%>$</p>
+             <p><%= total(carroParaVista,productos,session)%>€</p>
              <button class="waves-effect waves-light btn orange darken-3" type="submit">Ajouter</button>
          </form>
          

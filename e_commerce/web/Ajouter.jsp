@@ -25,7 +25,7 @@
             function mensaje(){
              if (document.getElementById("cantidadProduit").value.valueOf(!null)){
                  console.log("etehbe");
-                // Materialize.toast('Produit Agregado', 4000);
+
                  return true;   
              }
              else {return false;} 
@@ -33,15 +33,15 @@
             
         </script>
 
-        <%  //Llama los productos
+        <%  
            ArrayList<Produit> productos =(ArrayList<Produit>) session.getAttribute("productsLista"); 
             
         %>
-      <!--Import jQuery before materialize.js-->
+   
       <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script type="text/javascript" src="js/muhScript.js"></script>
-      <!--We do dis -->
+  
         
      <nav>       
     <div class="nav-wrapper orange lighten-1">
@@ -61,14 +61,14 @@
           
     %>
             
-    <li><a href="<%=hrefDeLogin%>"><%=inicioONombre%></a></li>      <!-- //cambia-->
+    <li><a href="<%=hrefDeLogin%>"><%=inicioONombre%></a></li>      
      <% String inicioNombreCarro="Panier.jsp";
             String href404="Notfound.jsp";
          if(session.getAttribute("carroData")==null){
          inicioNombreCarro=href404;
         }
         %>
-        <li><a href="<%=inicioNombreCarro%>">Panier</a></li>            <!--  //cambia-->
+        <li><a href="<%=inicioNombreCarro%>">Panier</a></li>            
         
          <% String inicioHistorial="Historique.jsp";
          if(session.getAttribute("Commande")==null){
@@ -76,7 +76,7 @@
         }
         %>
         
-        <li><a href="<%=inicioHistorial%>">Historiques des commandes</a></li>           <!-- //cambia-->
+        <li><a href="<%=inicioHistorial%>">Historiques des commandes</a></li>      
       </ul>
     </div>
       </nav>
@@ -94,7 +94,7 @@
        <div class="row">     
            
                <h4 class="col l6 m8 offset-l4 offset-m4"><%= productos.get(current).getNombre_producto()%></h4>
-     <h5 class="col l6 m8 offset-l6 offset-m5">$<%=productos.get(current).getPrecioProduit()%></h5>
+     <h5 class="col l6 m8 offset-l6 offset-m5"><%=productos.get(current).getPrecioProduit()%>€</h5>
      <img class="responsive-img col l6 m8 offset-l3 offset-m2" width="60%" src="<%= productos.get(current).getImagenProduit() %>">
     
      <p class="col l10 offset-l1"><%=productos.get(current).getDescripcionProduit()%></p> 

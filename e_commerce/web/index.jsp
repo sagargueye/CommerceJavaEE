@@ -25,9 +25,9 @@
 
         
      <c:import url="/ProduitLoad" /> 
-        <%  //Llama los productos
+        <%  
             ArrayList<Produit> productos =(ArrayList<Produit>) session.getAttribute("productsLista"); 
-            //session.setAttribute("productos", productos);
+     
         %>
 
       <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
@@ -95,101 +95,7 @@
     </div>
   </div>   
   
-  <script type="text/javascript">
-    
-   /* 
-    function myFunction(idClickeado){
-        console.log(idClickeado);
-       document.getElementById("idCurrent").value = idClickeado;
-       //console.log(document.getElementById("idCurrent").value);
-       //document.getElementById("productBuyOcult").submit();
-        $.ajax({
-                    type: "post",
-                    url: "ProduitLoad", //this is my servlet
-                    data: {idCurrent:idClickeado},
-                    success: function(){      
-                            console.log("ayyy");
-                           
-                         }
-                });
-       return true;
-    }
-    */
-</script>
 
-
-<!--
-    <div id="agregarACarroModal" class="modal">
-    <div class="modal-content">
-      <center>
-     <h4 id="productoTituloModal"></h4>
-     <h5 id="productoPrecioModal">$399.99</h5>
-     <img id="productoImagenModal" class="responsive-img" width="60%" src="">
-      </center>
-        <div class="container">
-        <div class="row">
-       <div class="col l1"><p>Cantidad: </p></div>
-       <div class="col l2 offset-l1"><input type="number"></div>
-      <div class="col l2 offset-l6"><p>Total: </p></div>
-      <div class="col l2"><input type="button" class="waves-effect waves-light btn orange darken-4" value="Agregar"></div>
-        </div>
-        </div>
-    </div>
-  </div>     <!-- //cambia-->
-  <!--  
-    <div id="carritoModal" class="modal modal-fixed-footer">
-    <div class="modal-content">
-       
-            <div class="divider"></div>
-                <div class="section">
-                     <div class="row">
-                    <div class="col s6 m3 l2"><img class="responsive-img" src="http://www.evga.com/products/images/gallery/06G-P4-2790-KR_XL_4.jpg"></div>
-                    <div class="col s6 m3 l2"><h5>Section 1</h5></div>
-                    <div class="col s6 m3 l2"><p>Stuff</p></div>
-                    <div class="col s6  m3 l2 offset-l4">
-                    <p>Cantidad: </p>
-                    <input type="number">
-                    </div>
-                     </div>
-                </div>
-           <div class="divider"></div>
-                <div class="section">
-                     <div class="row">
-                    <div class="col s6 m3 l2"><img class="responsive-img" src="http://www.evga.com/products/images/gallery/06G-P4-2790-KR_XL_4.jpg"></div>
-                    <div class="col s6 m3 l2"><h5>Section 1</h5></div>
-                    <div class="col s6 m3 l2"><p>Stuff</p></div>
-                    <div class="col s6 m3 l2 offset-l4">
-                    <p>Cantidad: </p>
-                    <input type="number">
-                    </div>
-                     </div>
-                </div>
-           <div class="divider"></div>
-                <div class="section">
-                     <div class="row">
-                    <div class="col s6 m3 l2"><img class="responsive-img" src="http://www.evga.com/products/images/gallery/06G-P4-2790-KR_XL_4.jpg"></div>
-                    <div class="col s6 m3 l2"><h5>Section 1</h5></div>
-                    <div class="col s6 m3 l2"><p>Stuff</p></div>
-                    <div class="col s6 m3 l2 offset-l4">
-                    <p>Cantidad: </p>
-                    <input type="number">
-                    </div>
-                     </div>
-                </div> 
-    </div>
-    <div class="modal-footer">
-        <div class="row">
-        <input type="button" class="waves-effect waves-light btn orange darken-4" value="Commande">
-        <input type="button" class="waves-effect waves-light btn orange darken-3" value="Limpiar Carrito">
-        <p>Total: </p>
-  
-        <!-- <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a> 
-    </div>
-    </div>
-  </div>     <!-- //cambia
-    -->
-
-         
  
   
   <div class="container">
@@ -212,12 +118,11 @@
               <div class="card-content">
                   <p><%= productos.get(i).getNombre_producto()%></p>
 
-                  <p class="precio"><%=productos.get(i).getPrecioProduit()%>$</p>
+                  <p class="precio"><%=productos.get(i).getPrecioProduit()%>€</p>
               </div>
 
               <div class="card-action">
-                <!--<a href="#">Este es un enlace</a>-->
-                <!--<a href="#">Este es un enlace</a> -->
+  
             
                 <form id="productBuyOcult" action="ProduitLoad" method="post">
                  <input type="hidden" name="idCurrent" value="<%=i%>" id="idCurrent"/>
